@@ -1,0 +1,42 @@
+import 'package:dio/dio.dart';
+import 'package:retrofit/retrofit.dart';
+import 'package:flutter_api/src/core/api_response.dart';
+import 'package:flutter_api/src/pay/models/create_order_request.dart';
+import 'package:flutter_api/src/pay/models/create_order_resp.dart';
+import 'package:flutter_api/src/pay/models/goods_net_model.dart';
+import 'package:flutter_api/src/pay/models/order_status_resp.dart';
+import 'package:flutter_api/src/pay/models/verify_order_status_request.dart';
+import 'package:flutter_api/src/pay/models/create_order_net_model.dart';
+import 'package:flutter_api/src/pay/requests/create_apple_order_request.dart';
+import 'package:flutter_api/src/pay/requests/resume_apple_order_request.dart';
+
+part 'pay_api.g.dart';
+
+@RestApi(baseUrl: "")
+abstract class PayApi {
+  factory PayApi(Dio dio) = _PayApi;
+
+  /// 获取商品列表
+  @GET('/goods/v1/list')
+  Future<ApiResponse<GoodsListNetModel>> getProductList();
+
+  /// 创建订单
+  @POST("/pay/v3/createOrder")
+  Future<ApiResponse<CreateOrderResp>> createOrderV3(
+      @Body() CreateOrderRequest params);
+
+  /// 验证订单状态
+  @POST("/pay/v1/orderStatus")
+  Future<ApiResponse<OrderStatusResp>> surePay(
+      @Body() VerifyOrderStatusRequest params);
+
+  /// 创建苹果订单
+  @POST("/apple/pay/v2/createOrder")
+  Future<ApiResponse<CreateOrderNetModel>> createAppleOrder(
+      @Body() CreateAppleOrderRequest params);
+
+  /// 恢复苹果订单
+  @POST("/apple/pay/v2/userVerifyOrder")
+  Future<ApiResponse<void>> resumeAppleOrder(
+      @Body() ResumeAppleOrderRequest params);
+}
