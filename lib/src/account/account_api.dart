@@ -22,4 +22,20 @@ abstract class AccountApi {
   /// 获取用户信息
   @GET('/user/v2/me/info')
   Future<ApiResponse<UserModel>> getUserInfo();
+
+  /// 华为一键登录
+  @POST("/user/v1/hwLogin")
+  Future<ApiResponse<HwLoginResponse>> hwLogin(@Body() HwLoginRequest request);
+
+  /// 邮箱验证码登录
+  @POST("/user/v1/emailLogin")
+  Future<ApiResponse<LoginResponse>> emailLogin(@Body() EmailLoginRequest request);
+
+  /// 发送邮箱验证码
+  @POST("/verifyCode/v1/email")
+  Future<ApiResponse<void>> sendEmailCode(@Body() SendEmailCodeRequest request);
+
+  /// 注销账号
+  @POST("/user/v1/deleteAccount")
+  Future<ApiResponse<void>> deleteAccount();
 }

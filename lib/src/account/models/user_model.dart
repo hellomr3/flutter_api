@@ -44,6 +44,14 @@ class UserModel {
   bool get freeVip => vipInfo?.freeVip ?? false;
 
   bool get hasVip => lifeTime || paidVip || freeVip;
+
+  /// VIP文案展示
+  String get memberDesc {
+    if (vipInfo?.lifeTime == true) return "永久会员";
+    if (vipInfo?.paidVip == true) return "付费会员持续至:${vipInfo?.expiredAt ?? ""}";
+    if (vipInfo?.freeVip == true) return "免费会员持续至:${vipInfo?.expiredAt ?? ""}";
+    return "";
+  }
 }
 
 @JsonSerializable()

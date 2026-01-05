@@ -38,10 +38,17 @@ class WechatLoginResponse {
   WechatLoginResponse({this.token, this.wechatId});
 
   // 微信登录成功
-  bool get loginSuccess => token != null && token!.isNotEmpty && wechatId != null && wechatId!.isNotEmpty;
+  bool get loginSuccess =>
+      token != null &&
+      token!.isNotEmpty &&
+      wechatId != null &&
+      wechatId!.isNotEmpty;
 
   // 微信登录成功，但是需要绑定用户
-  bool get bindWechat => (token == null || token!.isEmpty) && wechatId != null && wechatId!.isNotEmpty;
+  bool get bindWechat =>
+      (token == null || token!.isEmpty) &&
+      wechatId != null &&
+      wechatId!.isNotEmpty;
 
   factory WechatLoginResponse.fromJson(Map<String, dynamic> json) =>
       _$WechatLoginResponseFromJson(json);
@@ -60,10 +67,52 @@ class HwLoginResponse {
   bool get loginSuccess => token != null && token!.isNotEmpty;
 
   // 微信登录成功，但是需要绑定用户
-  bool get bindAccount => (token == null || token!.isEmpty) && providerId != null && providerId!.isNotEmpty;
+  bool get bindAccount =>
+      (token == null || token!.isEmpty) &&
+      providerId != null &&
+      providerId!.isNotEmpty;
 
   factory HwLoginResponse.fromJson(Map<String, dynamic> json) =>
       _$HwLoginResponseFromJson(json);
 
   Map<String, dynamic> toJson() => _$HwLoginResponseToJson(this);
+}
+
+@JsonSerializable()
+class HwLoginRequest {
+  final String authCode;
+  final String action;
+
+  HwLoginRequest({required this.authCode, required this.action});
+
+  factory HwLoginRequest.fromJson(Map<String, dynamic> json) =>
+      _$HwLoginRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$HwLoginRequestToJson(this);
+}
+
+@JsonSerializable()
+class EmailLoginRequest {
+  final String email;
+  final String verifyCode;
+
+  EmailLoginRequest({required this.email, required this.verifyCode});
+
+  factory EmailLoginRequest.fromJson(Map<String, dynamic> json) =>
+      _$EmailLoginRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EmailLoginRequestToJson(this);
+}
+
+@JsonSerializable()
+class SendEmailCodeRequest {
+  final String email;
+  final String type;
+
+  SendEmailCodeRequest({required this.email, required this.type});
+
+  factory SendEmailCodeRequest.fromJson(Map<String, dynamic> json) =>
+      _$SendEmailCodeRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$SendEmailCodeRequestToJson(this);
 }
