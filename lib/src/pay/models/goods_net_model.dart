@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:intl/intl.dart';
 
 part 'goods_net_model.freezed.dart';
 part 'goods_net_model.g.dart';
@@ -38,29 +37,6 @@ abstract class GoodsNetModel with _$GoodsNetModel {
   double get discountRate {
     if (originalPrice <= 0) return 0;
     return (originalPrice - price) / originalPrice;
-  }
-
-  String get formattedPrice {
-    final formatter = NumberFormat.currency(symbol: "", decimalDigits: 2);
-    formatter.minimumFractionDigits = 0; // 最少小数位数
-    formatter.maximumFractionDigits = 2; // 最多小数位数
-    return formatter.format((price / 100.0));
-  }
-
-  String get formattedPriceWithSymbol {
-    final formatter =
-        NumberFormat.currency(symbol: currencySymbol, decimalDigits: 2);
-    formatter.minimumFractionDigits = 0; // 最少小数位数
-    formatter.maximumFractionDigits = 2; // 最多小数位数
-    return formatter.format((price / 100.0));
-  }
-
-  String get formattedOriginalPrice {
-    final formatter =
-        NumberFormat.currency(symbol: currencySymbol, decimalDigits: 2);
-    formatter.minimumFractionDigits = 0; // 最少小数位数
-    formatter.maximumFractionDigits = 2; // 最多小数位数
-    return "原价 ${formatter.format((originalPrice / 100.0))}";
   }
 }
 

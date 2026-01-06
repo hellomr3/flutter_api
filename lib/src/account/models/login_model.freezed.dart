@@ -865,8 +865,8 @@ extension HwLoginResponsePatterns on HwLoginResponse {
 
 /// @nodoc
 @JsonSerializable()
-class _HwLoginResponse implements HwLoginResponse {
-  const _HwLoginResponse({this.token, this.providerId});
+class _HwLoginResponse extends HwLoginResponse {
+  const _HwLoginResponse({this.token, this.providerId}) : super._();
   factory _HwLoginResponse.fromJson(Map<String, dynamic> json) =>
       _$HwLoginResponseFromJson(json);
 

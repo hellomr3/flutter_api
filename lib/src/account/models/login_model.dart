@@ -46,8 +46,16 @@ abstract class HwLoginResponse with _$HwLoginResponse {
     String? providerId,
   }) = _HwLoginResponse;
 
+  const HwLoginResponse._();
+
   factory HwLoginResponse.fromJson(Map<String, dynamic> json) =>
       _$HwLoginResponseFromJson(json);
+
+  // 登录成功
+  get loginSuccess => token?.isNotEmpty == true;
+
+  // 登录成功，但是需要绑定用户
+  get bindAccount => providerId?.isNotEmpty == true;
 }
 
 // 华为登录响应扩展

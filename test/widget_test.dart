@@ -1,30 +1,50 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
+import 'package:flutter_api/flutter_api.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_api/main.dart';
-
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  group('API Models Serialization Tests', () {
+    test('LoginQueryParams serialization', () {
+      final params = LoginQueryParams(
+        username: 'test',
+        password: 'password123',
+      );
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+      final json = params.toJson();
+      expect(json['username'], 'test');
+      expect(json['password'], 'password123');
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+      final deserialized = LoginQueryParams.fromJson(json);
+      expect(deserialized.username, 'test');
+      expect(deserialized.password, 'password123');
+    });
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    test('UserModel serialization', () {
+      final json = {
+        'id': '123',
+        'username': 'testuser',
+        'createdAt': 1234567890,
+        'vipInfo': null,
+      };
+
+      final user = UserModel.fromJson(json);
+      expect(user.id, '123');
+      expect(user.username, 'testuser');
+      expect(user.createdAt, 1234567890);
+    });
+
+    test('RegisterQueryParams serialization', () {
+      final params = RegisterQueryParams(
+        username: 'newuser',
+        password: 'pass123',
+        rePassword: 'pass123',
+        inviterCode: 'INVITE123',
+      );
+
+      final json = params.toJson();
+      expect(json['username'], 'newuser');
+      expect(json['password'], 'pass123');
+      expect(json['rePassword'], 'pass123');
+      expect(json['inviterCode'], 'INVITE123');
+    });
   });
 }
