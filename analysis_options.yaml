@@ -26,3 +26,7 @@ linter:
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
+## 如果你计划与 json_serializable 一起使用 Freezed，那么最近的 json_serializable 和 meta 版本可能需要你禁用 invalid_annotation_target 警告。
+analyzer:
+  errors:
+    invalid_annotation_target: ignore
