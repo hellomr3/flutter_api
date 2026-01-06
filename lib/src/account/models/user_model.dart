@@ -8,7 +8,6 @@ class UserModel {
   int createdAt;
   String? email;
   String id;
-  bool isVip;
   String? tel;
   int? updatedAt;
   String username;
@@ -22,7 +21,6 @@ class UserModel {
     required this.createdAt,
     this.email,
     required this.id,
-    required this.isVip,
     this.tel,
     this.updatedAt,
     required this.username,
@@ -31,6 +29,13 @@ class UserModel {
     this.inviteCode,
     this.vipInfo,
   });
+
+  /// 是否为VIP用户（计算属性，从vipInfo计算得出）
+  bool get isVip {
+    return vipInfo?.lifeTime == true ||
+        vipInfo?.paidVip == true ||
+        vipInfo?.freeVip == true;
+  }
 
   factory UserModel.fromJson(Map<String, dynamic> json) =>
       _$UserModelFromJson(json);
