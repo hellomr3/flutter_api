@@ -1,17 +1,14 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'create_order_request.freezed.dart';
 part 'create_order_request.g.dart';
 
-@JsonSerializable()
-class CreateOrderRequest {
-  final String goodsId;
-
-  CreateOrderRequest({
-    required this.goodsId,
-  });
+@freezed
+abstract class CreateOrderRequest with _$CreateOrderRequest {
+  const factory CreateOrderRequest({
+    required String goodsId,
+  }) = _CreateOrderRequest;
 
   factory CreateOrderRequest.fromJson(Map<String, dynamic> json) =>
       _$CreateOrderRequestFromJson(json);
-
-  Map<String, dynamic> toJson() => _$CreateOrderRequestToJson(this);
 }

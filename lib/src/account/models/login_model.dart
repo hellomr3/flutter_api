@@ -1,43 +1,42 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'login_model.freezed.dart';
 part 'login_model.g.dart';
 
-@JsonSerializable()
-class LoginRequest {
-  LoginRequest({
-    required this.password,
-    required this.username,
-  });
-
-  String password;
-  String username;
+@freezed
+abstract class LoginRequest with _$LoginRequest {
+  const factory LoginRequest({
+    required String password,
+    required String username,
+  }) = _LoginRequest;
 
   factory LoginRequest.fromJson(Map<String, dynamic> json) =>
       _$LoginRequestFromJson(json);
-
-  Map<String, dynamic> toJson() => _$LoginRequestToJson(this);
 }
 
-@JsonSerializable()
-class LoginResponse {
-  final String? token;
-
-  LoginResponse({this.token});
+@freezed
+abstract class LoginResponse with _$LoginResponse {
+  const factory LoginResponse({
+    String? token,
+  }) = _LoginResponse;
 
   factory LoginResponse.fromJson(Map<String, dynamic> json) =>
       _$LoginResponseFromJson(json);
-
-  Map<String, dynamic> toJson() => _$LoginResponseToJson(this);
 }
 
-@JsonSerializable()
-class WechatLoginResponse {
-  final String? token;
-  final String? wechatId;
+@freezed
+abstract class WechatLoginResponse with _$WechatLoginResponse {
+  const factory WechatLoginResponse({
+    String? token,
+    String? wechatId,
+  }) = _WechatLoginResponse;
 
-  WechatLoginResponse({this.token, this.wechatId});
+  factory WechatLoginResponse.fromJson(Map<String, dynamic> json) =>
+      _$WechatLoginResponseFromJson(json);
+}
 
-  // 微信登录成功
+// 微信登录成功
+extension WechatLoginResponseExtension on WechatLoginResponse {
   bool get loginSuccess =>
       token != null &&
       token!.isNotEmpty &&
@@ -49,70 +48,60 @@ class WechatLoginResponse {
       (token == null || token!.isEmpty) &&
       wechatId != null &&
       wechatId!.isNotEmpty;
-
-  factory WechatLoginResponse.fromJson(Map<String, dynamic> json) =>
-      _$WechatLoginResponseFromJson(json);
-
-  Map<String, dynamic> toJson() => _$WechatLoginResponseToJson(this);
 }
 
-@JsonSerializable()
-class HwLoginResponse {
-  final String? token;
-  final String? providerId;
+@freezed
+abstract class HwLoginResponse with _$HwLoginResponse {
+  const factory HwLoginResponse({
+    String? token,
+    String? providerId,
+  }) = _HwLoginResponse;
 
-  HwLoginResponse({this.token, this.providerId});
+  factory HwLoginResponse.fromJson(Map<String, dynamic> json) =>
+      _$HwLoginResponseFromJson(json);
+}
 
+// 华为登录响应扩展
+extension HwLoginResponseExtension on HwLoginResponse {
   // 登录成功
   bool get loginSuccess => token != null && token!.isNotEmpty;
 
-  // 微信登录成功，但是需要绑定用户
+  // 登录成功，但是需要绑定用户
   bool get bindAccount =>
       (token == null || token!.isEmpty) &&
       providerId != null &&
       providerId!.isNotEmpty;
-
-  factory HwLoginResponse.fromJson(Map<String, dynamic> json) =>
-      _$HwLoginResponseFromJson(json);
-
-  Map<String, dynamic> toJson() => _$HwLoginResponseToJson(this);
 }
 
-@JsonSerializable()
-class HwLoginRequest {
-  final String authCode;
-  final String action;
-
-  HwLoginRequest({required this.authCode, required this.action});
+@freezed
+abstract class HwLoginRequest with _$HwLoginRequest {
+  const factory HwLoginRequest({
+    required String authCode,
+    required String action,
+  }) = _HwLoginRequest;
 
   factory HwLoginRequest.fromJson(Map<String, dynamic> json) =>
       _$HwLoginRequestFromJson(json);
-
-  Map<String, dynamic> toJson() => _$HwLoginRequestToJson(this);
 }
 
-@JsonSerializable()
-class EmailLoginRequest {
-  final String email;
-  final String verifyCode;
-
-  EmailLoginRequest({required this.email, required this.verifyCode});
+@freezed
+abstract class EmailLoginRequest with _$EmailLoginRequest {
+  const factory EmailLoginRequest({
+    required String email,
+    required String verifyCode,
+  }) = _EmailLoginRequest;
 
   factory EmailLoginRequest.fromJson(Map<String, dynamic> json) =>
       _$EmailLoginRequestFromJson(json);
-
-  Map<String, dynamic> toJson() => _$EmailLoginRequestToJson(this);
 }
 
-@JsonSerializable()
-class SendEmailCodeRequest {
-  final String email;
-  final String type;
-
-  SendEmailCodeRequest({required this.email, required this.type});
+@freezed
+abstract class SendEmailCodeRequest with _$SendEmailCodeRequest {
+  const factory SendEmailCodeRequest({
+    required String email,
+    required String type,
+  }) = _SendEmailCodeRequest;
 
   factory SendEmailCodeRequest.fromJson(Map<String, dynamic> json) =>
       _$SendEmailCodeRequestFromJson(json);
-
-  Map<String, dynamic> toJson() => _$SendEmailCodeRequestToJson(this);
 }

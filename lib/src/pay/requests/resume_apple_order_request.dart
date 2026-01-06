@@ -1,17 +1,14 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'resume_apple_order_request.freezed.dart';
 part 'resume_apple_order_request.g.dart';
 
-@JsonSerializable()
-class ResumeAppleOrderRequest {
-  final String signedPayload;
-
-  ResumeAppleOrderRequest({
-    required this.signedPayload,
-  });
+@freezed
+abstract class ResumeAppleOrderRequest with _$ResumeAppleOrderRequest {
+  const factory ResumeAppleOrderRequest({
+    required String signedPayload,
+  }) = _ResumeAppleOrderRequest;
 
   factory ResumeAppleOrderRequest.fromJson(Map<String, dynamic> json) =>
       _$ResumeAppleOrderRequestFromJson(json);
-
-  Map<String, dynamic> toJson() => _$ResumeAppleOrderRequestToJson(this);
 }

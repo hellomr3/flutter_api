@@ -1,34 +1,28 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'user_model.freezed.dart';
 part 'user_model.g.dart';
 
-@JsonSerializable()
-class UserModel {
-  String? avatarUrl;
-  int createdAt;
-  String? email;
-  String id;
-  String? tel;
-  int? updatedAt;
-  String username;
-  String? nickname;
-  bool? wechatBind;
-  String? inviteCode;
-  VipInfoNetModel? vipInfo;
+@freezed
+abstract class UserModel with _$UserModel {
+  const UserModel._();
 
-  UserModel({
-    this.avatarUrl,
-    required this.createdAt,
-    this.email,
-    required this.id,
-    this.tel,
-    this.updatedAt,
-    required this.username,
-    this.nickname,
-    this.wechatBind,
-    this.inviteCode,
-    this.vipInfo,
-  });
+  const factory UserModel({
+    String? avatarUrl,
+    required int createdAt,
+    String? email,
+    required String id,
+    String? tel,
+    int? updatedAt,
+    required String username,
+    String? nickname,
+    bool? wechatBind,
+    String? inviteCode,
+    VipInfoNetModel? vipInfo,
+  }) = _UserModel;
+
+  factory UserModel.fromJson(Map<String, dynamic> json) =>
+      _$UserModelFromJson(json);
 
   /// 是否为VIP用户（计算属性，从vipInfo计算得出）
   bool get isVip {
@@ -36,11 +30,6 @@ class UserModel {
         vipInfo?.paidVip == true ||
         vipInfo?.freeVip == true;
   }
-
-  factory UserModel.fromJson(Map<String, dynamic> json) =>
-      _$UserModelFromJson(json);
-
-  Map<String, dynamic> toJson() => _$UserModelToJson(this);
 
   bool get lifeTime => vipInfo?.lifeTime ?? false;
 
@@ -59,22 +48,15 @@ class UserModel {
   }
 }
 
-@JsonSerializable()
-class VipInfoNetModel {
-  final bool? lifeTime;
-  final bool? paidVip;
-  final bool? freeVip;
-  final String? expiredAt;
-
-  VipInfoNetModel({
-    this.lifeTime,
-    this.paidVip,
-    this.freeVip,
-    this.expiredAt,
-  });
+@freezed
+abstract class VipInfoNetModel with _$VipInfoNetModel {
+  const factory VipInfoNetModel({
+    bool? lifeTime,
+    bool? paidVip,
+    bool? freeVip,
+    String? expiredAt,
+  }) = _VipInfoNetModel;
 
   factory VipInfoNetModel.fromJson(Map<String, dynamic> json) =>
       _$VipInfoNetModelFromJson(json);
-
-  Map<String, dynamic> toJson() => _$VipInfoNetModelToJson(this);
 }

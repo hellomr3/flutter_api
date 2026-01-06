@@ -1,23 +1,17 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'register.freezed.dart';
 part 'register.g.dart';
 
-@JsonSerializable()
-class RegisterParams {
-  String password;
-  String rePassword;
-  String username;
-  String? inviterCode;
-
-  RegisterParams({
-    required this.password,
-    required this.rePassword,
-    required this.username,
-    this.inviterCode,
-  });
+@freezed
+abstract class RegisterParams with _$RegisterParams {
+  const factory RegisterParams({
+    required String password,
+    required String rePassword,
+    required String username,
+    String? inviterCode,
+  }) = _RegisterParams;
 
   factory RegisterParams.fromJson(Map<String, dynamic> json) =>
       _$RegisterParamsFromJson(json);
-
-  Map<String, dynamic> toJson() => _$RegisterParamsToJson(this);
 }

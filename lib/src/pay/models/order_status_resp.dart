@@ -1,16 +1,15 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'order_status_resp.freezed.dart';
 part 'order_status_resp.g.dart';
 
-@JsonSerializable()
-class OrderStatusResp {
-  final String? orderId;
-  final bool? success;
-
-  OrderStatusResp({this.orderId, this.success});
+@freezed
+abstract class OrderStatusResp with _$OrderStatusResp {
+  const factory OrderStatusResp({
+    String? orderId,
+    bool? success,
+  }) = _OrderStatusResp;
 
   factory OrderStatusResp.fromJson(Map<String, dynamic> json) =>
       _$OrderStatusRespFromJson(json);
-
-  Map<String, dynamic> toJson() => _$OrderStatusRespToJson(this);
 }

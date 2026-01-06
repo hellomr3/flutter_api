@@ -1,17 +1,16 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'create_order_resp.freezed.dart';
 part 'create_order_resp.g.dart';
 
-@JsonSerializable()
-class CreateOrderResp {
-  String? orderStr;
-  String? orderId;
-  String? token;
-
-  CreateOrderResp({this.orderStr, this.orderId, this.token});
+@freezed
+abstract class CreateOrderResp with _$CreateOrderResp {
+  const factory CreateOrderResp({
+    String? orderStr,
+    String? orderId,
+    String? token,
+  }) = _CreateOrderResp;
 
   factory CreateOrderResp.fromJson(Map<String, dynamic> json) =>
       _$CreateOrderRespFromJson(json);
-
-  Map<String, dynamic> toJson() => _$CreateOrderRespToJson(this);
 }
