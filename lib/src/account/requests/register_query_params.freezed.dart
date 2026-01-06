@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'register.dart';
+part of 'register_query_params.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,28 +13,28 @@ part of 'register.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$RegisterParams {
+mixin _$RegisterQueryParams {
   String get password;
   String get rePassword;
   String get username;
   String? get inviterCode;
 
-  /// Create a copy of RegisterParams
+  /// Create a copy of RegisterQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  $RegisterParamsCopyWith<RegisterParams> get copyWith =>
-      _$RegisterParamsCopyWithImpl<RegisterParams>(
-          this as RegisterParams, _$identity);
+  $RegisterQueryParamsCopyWith<RegisterQueryParams> get copyWith =>
+      _$RegisterQueryParamsCopyWithImpl<RegisterQueryParams>(
+          this as RegisterQueryParams, _$identity);
 
-  /// Serializes this RegisterParams to a JSON map.
+  /// Serializes this RegisterQueryParams to a JSON map.
   Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is RegisterParams &&
+            other is RegisterQueryParams &&
             (identical(other.password, password) ||
                 other.password == password) &&
             (identical(other.rePassword, rePassword) ||
@@ -52,15 +52,15 @@ mixin _$RegisterParams {
 
   @override
   String toString() {
-    return 'RegisterParams(password: $password, rePassword: $rePassword, username: $username, inviterCode: $inviterCode)';
+    return 'RegisterQueryParams(password: $password, rePassword: $rePassword, username: $username, inviterCode: $inviterCode)';
   }
 }
 
 /// @nodoc
-abstract mixin class $RegisterParamsCopyWith<$Res> {
-  factory $RegisterParamsCopyWith(
-          RegisterParams value, $Res Function(RegisterParams) _then) =
-      _$RegisterParamsCopyWithImpl;
+abstract mixin class $RegisterQueryParamsCopyWith<$Res> {
+  factory $RegisterQueryParamsCopyWith(
+          RegisterQueryParams value, $Res Function(RegisterQueryParams) _then) =
+      _$RegisterQueryParamsCopyWithImpl;
   @useResult
   $Res call(
       {String password,
@@ -70,14 +70,14 @@ abstract mixin class $RegisterParamsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RegisterParamsCopyWithImpl<$Res>
-    implements $RegisterParamsCopyWith<$Res> {
-  _$RegisterParamsCopyWithImpl(this._self, this._then);
+class _$RegisterQueryParamsCopyWithImpl<$Res>
+    implements $RegisterQueryParamsCopyWith<$Res> {
+  _$RegisterQueryParamsCopyWithImpl(this._self, this._then);
 
-  final RegisterParams _self;
-  final $Res Function(RegisterParams) _then;
+  final RegisterQueryParams _self;
+  final $Res Function(RegisterQueryParams) _then;
 
-  /// Create a copy of RegisterParams
+  /// Create a copy of RegisterQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -108,8 +108,8 @@ class _$RegisterParamsCopyWithImpl<$Res>
   }
 }
 
-/// Adds pattern-matching-related methods to [RegisterParams].
-extension RegisterParamsPatterns on RegisterParams {
+/// Adds pattern-matching-related methods to [RegisterQueryParams].
+extension RegisterQueryParamsPatterns on RegisterQueryParams {
   /// A variant of `map` that fallback to returning `orElse`.
   ///
   /// It is equivalent to doing:
@@ -124,12 +124,12 @@ extension RegisterParamsPatterns on RegisterParams {
 
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
-    TResult Function(_RegisterParams value)? $default, {
+    TResult Function(_RegisterQueryParams value)? $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
-      case _RegisterParams() when $default != null:
+      case _RegisterQueryParams() when $default != null:
         return $default(_that);
       case _:
         return orElse();
@@ -151,11 +151,11 @@ extension RegisterParamsPatterns on RegisterParams {
 
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
-    TResult Function(_RegisterParams value) $default,
+    TResult Function(_RegisterQueryParams value) $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _RegisterParams():
+      case _RegisterQueryParams():
         return $default(_that);
       case _:
         throw StateError('Unexpected subclass');
@@ -176,11 +176,11 @@ extension RegisterParamsPatterns on RegisterParams {
 
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_RegisterParams value)? $default,
+    TResult? Function(_RegisterQueryParams value)? $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _RegisterParams() when $default != null:
+      case _RegisterQueryParams() when $default != null:
         return $default(_that);
       case _:
         return null;
@@ -208,7 +208,7 @@ extension RegisterParamsPatterns on RegisterParams {
   }) {
     final _that = this;
     switch (_that) {
-      case _RegisterParams() when $default != null:
+      case _RegisterQueryParams() when $default != null:
         return $default(_that.password, _that.rePassword, _that.username,
             _that.inviterCode);
       case _:
@@ -237,7 +237,7 @@ extension RegisterParamsPatterns on RegisterParams {
   ) {
     final _that = this;
     switch (_that) {
-      case _RegisterParams():
+      case _RegisterQueryParams():
         return $default(_that.password, _that.rePassword, _that.username,
             _that.inviterCode);
       case _:
@@ -265,7 +265,7 @@ extension RegisterParamsPatterns on RegisterParams {
   ) {
     final _that = this;
     switch (_that) {
-      case _RegisterParams() when $default != null:
+      case _RegisterQueryParams() when $default != null:
         return $default(_that.password, _that.rePassword, _that.username,
             _that.inviterCode);
       case _:
@@ -276,14 +276,14 @@ extension RegisterParamsPatterns on RegisterParams {
 
 /// @nodoc
 @JsonSerializable()
-class _RegisterParams implements RegisterParams {
-  const _RegisterParams(
+class _RegisterQueryParams implements RegisterQueryParams {
+  const _RegisterQueryParams(
       {required this.password,
       required this.rePassword,
       required this.username,
       this.inviterCode});
-  factory _RegisterParams.fromJson(Map<String, dynamic> json) =>
-      _$RegisterParamsFromJson(json);
+  factory _RegisterQueryParams.fromJson(Map<String, dynamic> json) =>
+      _$RegisterQueryParamsFromJson(json);
 
   @override
   final String password;
@@ -294,17 +294,18 @@ class _RegisterParams implements RegisterParams {
   @override
   final String? inviterCode;
 
-  /// Create a copy of RegisterParams
+  /// Create a copy of RegisterQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  _$RegisterParamsCopyWith<_RegisterParams> get copyWith =>
-      __$RegisterParamsCopyWithImpl<_RegisterParams>(this, _$identity);
+  _$RegisterQueryParamsCopyWith<_RegisterQueryParams> get copyWith =>
+      __$RegisterQueryParamsCopyWithImpl<_RegisterQueryParams>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$RegisterParamsToJson(
+    return _$RegisterQueryParamsToJson(
       this,
     );
   }
@@ -313,7 +314,7 @@ class _RegisterParams implements RegisterParams {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _RegisterParams &&
+            other is _RegisterQueryParams &&
             (identical(other.password, password) ||
                 other.password == password) &&
             (identical(other.rePassword, rePassword) ||
@@ -331,16 +332,16 @@ class _RegisterParams implements RegisterParams {
 
   @override
   String toString() {
-    return 'RegisterParams(password: $password, rePassword: $rePassword, username: $username, inviterCode: $inviterCode)';
+    return 'RegisterQueryParams(password: $password, rePassword: $rePassword, username: $username, inviterCode: $inviterCode)';
   }
 }
 
 /// @nodoc
-abstract mixin class _$RegisterParamsCopyWith<$Res>
-    implements $RegisterParamsCopyWith<$Res> {
-  factory _$RegisterParamsCopyWith(
-          _RegisterParams value, $Res Function(_RegisterParams) _then) =
-      __$RegisterParamsCopyWithImpl;
+abstract mixin class _$RegisterQueryParamsCopyWith<$Res>
+    implements $RegisterQueryParamsCopyWith<$Res> {
+  factory _$RegisterQueryParamsCopyWith(_RegisterQueryParams value,
+          $Res Function(_RegisterQueryParams) _then) =
+      __$RegisterQueryParamsCopyWithImpl;
   @override
   @useResult
   $Res call(
@@ -351,14 +352,14 @@ abstract mixin class _$RegisterParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$RegisterParamsCopyWithImpl<$Res>
-    implements _$RegisterParamsCopyWith<$Res> {
-  __$RegisterParamsCopyWithImpl(this._self, this._then);
+class __$RegisterQueryParamsCopyWithImpl<$Res>
+    implements _$RegisterQueryParamsCopyWith<$Res> {
+  __$RegisterQueryParamsCopyWithImpl(this._self, this._then);
 
-  final _RegisterParams _self;
-  final $Res Function(_RegisterParams) _then;
+  final _RegisterQueryParams _self;
+  final $Res Function(_RegisterQueryParams) _then;
 
-  /// Create a copy of RegisterParams
+  /// Create a copy of RegisterQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
@@ -368,7 +369,7 @@ class __$RegisterParamsCopyWithImpl<$Res>
     Object? username = null,
     Object? inviterCode = freezed,
   }) {
-    return _then(_RegisterParams(
+    return _then(_RegisterQueryParams(
       password: null == password
           ? _self.password
           : password // ignore: cast_nullable_to_non_nullable

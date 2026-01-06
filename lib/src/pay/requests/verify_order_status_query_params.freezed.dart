@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'create_order_request.dart';
+part of 'verify_order_status_query_params.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,73 +13,75 @@ part of 'create_order_request.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$CreateOrderRequest {
-  String get goodsId;
+mixin _$VerifyOrderStatusQueryParams {
+  String? get orderId;
 
-  /// Create a copy of CreateOrderRequest
+  /// Create a copy of VerifyOrderStatusQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  $CreateOrderRequestCopyWith<CreateOrderRequest> get copyWith =>
-      _$CreateOrderRequestCopyWithImpl<CreateOrderRequest>(
-          this as CreateOrderRequest, _$identity);
+  $VerifyOrderStatusQueryParamsCopyWith<VerifyOrderStatusQueryParams>
+      get copyWith => _$VerifyOrderStatusQueryParamsCopyWithImpl<
+              VerifyOrderStatusQueryParams>(
+          this as VerifyOrderStatusQueryParams, _$identity);
 
-  /// Serializes this CreateOrderRequest to a JSON map.
+  /// Serializes this VerifyOrderStatusQueryParams to a JSON map.
   Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is CreateOrderRequest &&
-            (identical(other.goodsId, goodsId) || other.goodsId == goodsId));
+            other is VerifyOrderStatusQueryParams &&
+            (identical(other.orderId, orderId) || other.orderId == orderId));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, goodsId);
+  int get hashCode => Object.hash(runtimeType, orderId);
 
   @override
   String toString() {
-    return 'CreateOrderRequest(goodsId: $goodsId)';
+    return 'VerifyOrderStatusQueryParams(orderId: $orderId)';
   }
 }
 
 /// @nodoc
-abstract mixin class $CreateOrderRequestCopyWith<$Res> {
-  factory $CreateOrderRequestCopyWith(
-          CreateOrderRequest value, $Res Function(CreateOrderRequest) _then) =
-      _$CreateOrderRequestCopyWithImpl;
+abstract mixin class $VerifyOrderStatusQueryParamsCopyWith<$Res> {
+  factory $VerifyOrderStatusQueryParamsCopyWith(
+          VerifyOrderStatusQueryParams value,
+          $Res Function(VerifyOrderStatusQueryParams) _then) =
+      _$VerifyOrderStatusQueryParamsCopyWithImpl;
   @useResult
-  $Res call({String goodsId});
+  $Res call({String? orderId});
 }
 
 /// @nodoc
-class _$CreateOrderRequestCopyWithImpl<$Res>
-    implements $CreateOrderRequestCopyWith<$Res> {
-  _$CreateOrderRequestCopyWithImpl(this._self, this._then);
+class _$VerifyOrderStatusQueryParamsCopyWithImpl<$Res>
+    implements $VerifyOrderStatusQueryParamsCopyWith<$Res> {
+  _$VerifyOrderStatusQueryParamsCopyWithImpl(this._self, this._then);
 
-  final CreateOrderRequest _self;
-  final $Res Function(CreateOrderRequest) _then;
+  final VerifyOrderStatusQueryParams _self;
+  final $Res Function(VerifyOrderStatusQueryParams) _then;
 
-  /// Create a copy of CreateOrderRequest
+  /// Create a copy of VerifyOrderStatusQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? goodsId = null,
+    Object? orderId = freezed,
   }) {
     return _then(_self.copyWith(
-      goodsId: null == goodsId
-          ? _self.goodsId
-          : goodsId // ignore: cast_nullable_to_non_nullable
-              as String,
+      orderId: freezed == orderId
+          ? _self.orderId
+          : orderId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
-/// Adds pattern-matching-related methods to [CreateOrderRequest].
-extension CreateOrderRequestPatterns on CreateOrderRequest {
+/// Adds pattern-matching-related methods to [VerifyOrderStatusQueryParams].
+extension VerifyOrderStatusQueryParamsPatterns on VerifyOrderStatusQueryParams {
   /// A variant of `map` that fallback to returning `orElse`.
   ///
   /// It is equivalent to doing:
@@ -94,12 +96,12 @@ extension CreateOrderRequestPatterns on CreateOrderRequest {
 
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
-    TResult Function(_CreateOrderRequest value)? $default, {
+    TResult Function(_VerifyOrderStatusQueryParams value)? $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
-      case _CreateOrderRequest() when $default != null:
+      case _VerifyOrderStatusQueryParams() when $default != null:
         return $default(_that);
       case _:
         return orElse();
@@ -121,11 +123,11 @@ extension CreateOrderRequestPatterns on CreateOrderRequest {
 
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
-    TResult Function(_CreateOrderRequest value) $default,
+    TResult Function(_VerifyOrderStatusQueryParams value) $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _CreateOrderRequest():
+      case _VerifyOrderStatusQueryParams():
         return $default(_that);
       case _:
         throw StateError('Unexpected subclass');
@@ -146,11 +148,11 @@ extension CreateOrderRequestPatterns on CreateOrderRequest {
 
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_CreateOrderRequest value)? $default,
+    TResult? Function(_VerifyOrderStatusQueryParams value)? $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _CreateOrderRequest() when $default != null:
+      case _VerifyOrderStatusQueryParams() when $default != null:
         return $default(_that);
       case _:
         return null;
@@ -171,13 +173,13 @@ extension CreateOrderRequestPatterns on CreateOrderRequest {
 
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String goodsId)? $default, {
+    TResult Function(String? orderId)? $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
-      case _CreateOrderRequest() when $default != null:
-        return $default(_that.goodsId);
+      case _VerifyOrderStatusQueryParams() when $default != null:
+        return $default(_that.orderId);
       case _:
         return orElse();
     }
@@ -198,12 +200,12 @@ extension CreateOrderRequestPatterns on CreateOrderRequest {
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String goodsId) $default,
+    TResult Function(String? orderId) $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _CreateOrderRequest():
-        return $default(_that.goodsId);
+      case _VerifyOrderStatusQueryParams():
+        return $default(_that.orderId);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -223,12 +225,12 @@ extension CreateOrderRequestPatterns on CreateOrderRequest {
 
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(String goodsId)? $default,
+    TResult? Function(String? orderId)? $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _CreateOrderRequest() when $default != null:
-        return $default(_that.goodsId);
+      case _VerifyOrderStatusQueryParams() when $default != null:
+        return $default(_that.orderId);
       case _:
         return null;
     }
@@ -237,25 +239,26 @@ extension CreateOrderRequestPatterns on CreateOrderRequest {
 
 /// @nodoc
 @JsonSerializable()
-class _CreateOrderRequest implements CreateOrderRequest {
-  const _CreateOrderRequest({required this.goodsId});
-  factory _CreateOrderRequest.fromJson(Map<String, dynamic> json) =>
-      _$CreateOrderRequestFromJson(json);
+class _VerifyOrderStatusQueryParams implements VerifyOrderStatusQueryParams {
+  const _VerifyOrderStatusQueryParams({this.orderId});
+  factory _VerifyOrderStatusQueryParams.fromJson(Map<String, dynamic> json) =>
+      _$VerifyOrderStatusQueryParamsFromJson(json);
 
   @override
-  final String goodsId;
+  final String? orderId;
 
-  /// Create a copy of CreateOrderRequest
+  /// Create a copy of VerifyOrderStatusQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  _$CreateOrderRequestCopyWith<_CreateOrderRequest> get copyWith =>
-      __$CreateOrderRequestCopyWithImpl<_CreateOrderRequest>(this, _$identity);
+  _$VerifyOrderStatusQueryParamsCopyWith<_VerifyOrderStatusQueryParams>
+      get copyWith => __$VerifyOrderStatusQueryParamsCopyWithImpl<
+          _VerifyOrderStatusQueryParams>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$CreateOrderRequestToJson(
+    return _$VerifyOrderStatusQueryParamsToJson(
       this,
     );
   }
@@ -264,51 +267,52 @@ class _CreateOrderRequest implements CreateOrderRequest {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CreateOrderRequest &&
-            (identical(other.goodsId, goodsId) || other.goodsId == goodsId));
+            other is _VerifyOrderStatusQueryParams &&
+            (identical(other.orderId, orderId) || other.orderId == orderId));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, goodsId);
+  int get hashCode => Object.hash(runtimeType, orderId);
 
   @override
   String toString() {
-    return 'CreateOrderRequest(goodsId: $goodsId)';
+    return 'VerifyOrderStatusQueryParams(orderId: $orderId)';
   }
 }
 
 /// @nodoc
-abstract mixin class _$CreateOrderRequestCopyWith<$Res>
-    implements $CreateOrderRequestCopyWith<$Res> {
-  factory _$CreateOrderRequestCopyWith(
-          _CreateOrderRequest value, $Res Function(_CreateOrderRequest) _then) =
-      __$CreateOrderRequestCopyWithImpl;
+abstract mixin class _$VerifyOrderStatusQueryParamsCopyWith<$Res>
+    implements $VerifyOrderStatusQueryParamsCopyWith<$Res> {
+  factory _$VerifyOrderStatusQueryParamsCopyWith(
+          _VerifyOrderStatusQueryParams value,
+          $Res Function(_VerifyOrderStatusQueryParams) _then) =
+      __$VerifyOrderStatusQueryParamsCopyWithImpl;
   @override
   @useResult
-  $Res call({String goodsId});
+  $Res call({String? orderId});
 }
 
 /// @nodoc
-class __$CreateOrderRequestCopyWithImpl<$Res>
-    implements _$CreateOrderRequestCopyWith<$Res> {
-  __$CreateOrderRequestCopyWithImpl(this._self, this._then);
+class __$VerifyOrderStatusQueryParamsCopyWithImpl<$Res>
+    implements _$VerifyOrderStatusQueryParamsCopyWith<$Res> {
+  __$VerifyOrderStatusQueryParamsCopyWithImpl(this._self, this._then);
 
-  final _CreateOrderRequest _self;
-  final $Res Function(_CreateOrderRequest) _then;
+  final _VerifyOrderStatusQueryParams _self;
+  final $Res Function(_VerifyOrderStatusQueryParams) _then;
 
-  /// Create a copy of CreateOrderRequest
+  /// Create a copy of VerifyOrderStatusQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $Res call({
-    Object? goodsId = null,
+    Object? orderId = freezed,
   }) {
-    return _then(_CreateOrderRequest(
-      goodsId: null == goodsId
-          ? _self.goodsId
-          : goodsId // ignore: cast_nullable_to_non_nullable
-              as String,
+    return _then(_VerifyOrderStatusQueryParams(
+      orderId: freezed == orderId
+          ? _self.orderId
+          : orderId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }

@@ -4,17 +4,6 @@ part 'login_model.freezed.dart';
 part 'login_model.g.dart';
 
 @freezed
-abstract class LoginRequest with _$LoginRequest {
-  const factory LoginRequest({
-    required String password,
-    required String username,
-  }) = _LoginRequest;
-
-  factory LoginRequest.fromJson(Map<String, dynamic> json) =>
-      _$LoginRequestFromJson(json);
-}
-
-@freezed
 abstract class LoginResponse with _$LoginResponse {
   const factory LoginResponse({
     String? token,
@@ -71,37 +60,4 @@ extension HwLoginResponseExtension on HwLoginResponse {
       (token == null || token!.isEmpty) &&
       providerId != null &&
       providerId!.isNotEmpty;
-}
-
-@freezed
-abstract class HwLoginRequest with _$HwLoginRequest {
-  const factory HwLoginRequest({
-    required String authCode,
-    required String action,
-  }) = _HwLoginRequest;
-
-  factory HwLoginRequest.fromJson(Map<String, dynamic> json) =>
-      _$HwLoginRequestFromJson(json);
-}
-
-@freezed
-abstract class EmailLoginRequest with _$EmailLoginRequest {
-  const factory EmailLoginRequest({
-    required String email,
-    required String verifyCode,
-  }) = _EmailLoginRequest;
-
-  factory EmailLoginRequest.fromJson(Map<String, dynamic> json) =>
-      _$EmailLoginRequestFromJson(json);
-}
-
-@freezed
-abstract class SendEmailCodeRequest with _$SendEmailCodeRequest {
-  const factory SendEmailCodeRequest({
-    required String email,
-    required String type,
-  }) = _SendEmailCodeRequest;
-
-  factory SendEmailCodeRequest.fromJson(Map<String, dynamic> json) =>
-      _$SendEmailCodeRequestFromJson(json);
 }

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'verify_order_status_request.dart';
+part of 'resume_apple_order_query_params.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,73 +13,76 @@ part of 'verify_order_status_request.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$VerifyOrderStatusRequest {
-  String? get orderId;
+mixin _$ResumeAppleOrderQueryParams {
+  String get signedPayload;
 
-  /// Create a copy of VerifyOrderStatusRequest
+  /// Create a copy of ResumeAppleOrderQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  $VerifyOrderStatusRequestCopyWith<VerifyOrderStatusRequest> get copyWith =>
-      _$VerifyOrderStatusRequestCopyWithImpl<VerifyOrderStatusRequest>(
-          this as VerifyOrderStatusRequest, _$identity);
+  $ResumeAppleOrderQueryParamsCopyWith<ResumeAppleOrderQueryParams>
+      get copyWith => _$ResumeAppleOrderQueryParamsCopyWithImpl<
+              ResumeAppleOrderQueryParams>(
+          this as ResumeAppleOrderQueryParams, _$identity);
 
-  /// Serializes this VerifyOrderStatusRequest to a JSON map.
+  /// Serializes this ResumeAppleOrderQueryParams to a JSON map.
   Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is VerifyOrderStatusRequest &&
-            (identical(other.orderId, orderId) || other.orderId == orderId));
+            other is ResumeAppleOrderQueryParams &&
+            (identical(other.signedPayload, signedPayload) ||
+                other.signedPayload == signedPayload));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, orderId);
+  int get hashCode => Object.hash(runtimeType, signedPayload);
 
   @override
   String toString() {
-    return 'VerifyOrderStatusRequest(orderId: $orderId)';
+    return 'ResumeAppleOrderQueryParams(signedPayload: $signedPayload)';
   }
 }
 
 /// @nodoc
-abstract mixin class $VerifyOrderStatusRequestCopyWith<$Res> {
-  factory $VerifyOrderStatusRequestCopyWith(VerifyOrderStatusRequest value,
-          $Res Function(VerifyOrderStatusRequest) _then) =
-      _$VerifyOrderStatusRequestCopyWithImpl;
+abstract mixin class $ResumeAppleOrderQueryParamsCopyWith<$Res> {
+  factory $ResumeAppleOrderQueryParamsCopyWith(
+          ResumeAppleOrderQueryParams value,
+          $Res Function(ResumeAppleOrderQueryParams) _then) =
+      _$ResumeAppleOrderQueryParamsCopyWithImpl;
   @useResult
-  $Res call({String? orderId});
+  $Res call({String signedPayload});
 }
 
 /// @nodoc
-class _$VerifyOrderStatusRequestCopyWithImpl<$Res>
-    implements $VerifyOrderStatusRequestCopyWith<$Res> {
-  _$VerifyOrderStatusRequestCopyWithImpl(this._self, this._then);
+class _$ResumeAppleOrderQueryParamsCopyWithImpl<$Res>
+    implements $ResumeAppleOrderQueryParamsCopyWith<$Res> {
+  _$ResumeAppleOrderQueryParamsCopyWithImpl(this._self, this._then);
 
-  final VerifyOrderStatusRequest _self;
-  final $Res Function(VerifyOrderStatusRequest) _then;
+  final ResumeAppleOrderQueryParams _self;
+  final $Res Function(ResumeAppleOrderQueryParams) _then;
 
-  /// Create a copy of VerifyOrderStatusRequest
+  /// Create a copy of ResumeAppleOrderQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? orderId = freezed,
+    Object? signedPayload = null,
   }) {
     return _then(_self.copyWith(
-      orderId: freezed == orderId
-          ? _self.orderId
-          : orderId // ignore: cast_nullable_to_non_nullable
-              as String?,
+      signedPayload: null == signedPayload
+          ? _self.signedPayload
+          : signedPayload // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
-/// Adds pattern-matching-related methods to [VerifyOrderStatusRequest].
-extension VerifyOrderStatusRequestPatterns on VerifyOrderStatusRequest {
+/// Adds pattern-matching-related methods to [ResumeAppleOrderQueryParams].
+extension ResumeAppleOrderQueryParamsPatterns on ResumeAppleOrderQueryParams {
   /// A variant of `map` that fallback to returning `orElse`.
   ///
   /// It is equivalent to doing:
@@ -94,12 +97,12 @@ extension VerifyOrderStatusRequestPatterns on VerifyOrderStatusRequest {
 
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
-    TResult Function(_VerifyOrderStatusRequest value)? $default, {
+    TResult Function(_ResumeAppleOrderQueryParams value)? $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
-      case _VerifyOrderStatusRequest() when $default != null:
+      case _ResumeAppleOrderQueryParams() when $default != null:
         return $default(_that);
       case _:
         return orElse();
@@ -121,11 +124,11 @@ extension VerifyOrderStatusRequestPatterns on VerifyOrderStatusRequest {
 
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
-    TResult Function(_VerifyOrderStatusRequest value) $default,
+    TResult Function(_ResumeAppleOrderQueryParams value) $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _VerifyOrderStatusRequest():
+      case _ResumeAppleOrderQueryParams():
         return $default(_that);
       case _:
         throw StateError('Unexpected subclass');
@@ -146,11 +149,11 @@ extension VerifyOrderStatusRequestPatterns on VerifyOrderStatusRequest {
 
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_VerifyOrderStatusRequest value)? $default,
+    TResult? Function(_ResumeAppleOrderQueryParams value)? $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _VerifyOrderStatusRequest() when $default != null:
+      case _ResumeAppleOrderQueryParams() when $default != null:
         return $default(_that);
       case _:
         return null;
@@ -171,13 +174,13 @@ extension VerifyOrderStatusRequestPatterns on VerifyOrderStatusRequest {
 
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String? orderId)? $default, {
+    TResult Function(String signedPayload)? $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
-      case _VerifyOrderStatusRequest() when $default != null:
-        return $default(_that.orderId);
+      case _ResumeAppleOrderQueryParams() when $default != null:
+        return $default(_that.signedPayload);
       case _:
         return orElse();
     }
@@ -198,12 +201,12 @@ extension VerifyOrderStatusRequestPatterns on VerifyOrderStatusRequest {
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String? orderId) $default,
+    TResult Function(String signedPayload) $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _VerifyOrderStatusRequest():
-        return $default(_that.orderId);
+      case _ResumeAppleOrderQueryParams():
+        return $default(_that.signedPayload);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -223,12 +226,12 @@ extension VerifyOrderStatusRequestPatterns on VerifyOrderStatusRequest {
 
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(String? orderId)? $default,
+    TResult? Function(String signedPayload)? $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _VerifyOrderStatusRequest() when $default != null:
-        return $default(_that.orderId);
+      case _ResumeAppleOrderQueryParams() when $default != null:
+        return $default(_that.signedPayload);
       case _:
         return null;
     }
@@ -237,26 +240,26 @@ extension VerifyOrderStatusRequestPatterns on VerifyOrderStatusRequest {
 
 /// @nodoc
 @JsonSerializable()
-class _VerifyOrderStatusRequest implements VerifyOrderStatusRequest {
-  const _VerifyOrderStatusRequest({this.orderId});
-  factory _VerifyOrderStatusRequest.fromJson(Map<String, dynamic> json) =>
-      _$VerifyOrderStatusRequestFromJson(json);
+class _ResumeAppleOrderQueryParams implements ResumeAppleOrderQueryParams {
+  const _ResumeAppleOrderQueryParams({required this.signedPayload});
+  factory _ResumeAppleOrderQueryParams.fromJson(Map<String, dynamic> json) =>
+      _$ResumeAppleOrderQueryParamsFromJson(json);
 
   @override
-  final String? orderId;
+  final String signedPayload;
 
-  /// Create a copy of VerifyOrderStatusRequest
+  /// Create a copy of ResumeAppleOrderQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  _$VerifyOrderStatusRequestCopyWith<_VerifyOrderStatusRequest> get copyWith =>
-      __$VerifyOrderStatusRequestCopyWithImpl<_VerifyOrderStatusRequest>(
-          this, _$identity);
+  _$ResumeAppleOrderQueryParamsCopyWith<_ResumeAppleOrderQueryParams>
+      get copyWith => __$ResumeAppleOrderQueryParamsCopyWithImpl<
+          _ResumeAppleOrderQueryParams>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$VerifyOrderStatusRequestToJson(
+    return _$ResumeAppleOrderQueryParamsToJson(
       this,
     );
   }
@@ -265,51 +268,53 @@ class _VerifyOrderStatusRequest implements VerifyOrderStatusRequest {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _VerifyOrderStatusRequest &&
-            (identical(other.orderId, orderId) || other.orderId == orderId));
+            other is _ResumeAppleOrderQueryParams &&
+            (identical(other.signedPayload, signedPayload) ||
+                other.signedPayload == signedPayload));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, orderId);
+  int get hashCode => Object.hash(runtimeType, signedPayload);
 
   @override
   String toString() {
-    return 'VerifyOrderStatusRequest(orderId: $orderId)';
+    return 'ResumeAppleOrderQueryParams(signedPayload: $signedPayload)';
   }
 }
 
 /// @nodoc
-abstract mixin class _$VerifyOrderStatusRequestCopyWith<$Res>
-    implements $VerifyOrderStatusRequestCopyWith<$Res> {
-  factory _$VerifyOrderStatusRequestCopyWith(_VerifyOrderStatusRequest value,
-          $Res Function(_VerifyOrderStatusRequest) _then) =
-      __$VerifyOrderStatusRequestCopyWithImpl;
+abstract mixin class _$ResumeAppleOrderQueryParamsCopyWith<$Res>
+    implements $ResumeAppleOrderQueryParamsCopyWith<$Res> {
+  factory _$ResumeAppleOrderQueryParamsCopyWith(
+          _ResumeAppleOrderQueryParams value,
+          $Res Function(_ResumeAppleOrderQueryParams) _then) =
+      __$ResumeAppleOrderQueryParamsCopyWithImpl;
   @override
   @useResult
-  $Res call({String? orderId});
+  $Res call({String signedPayload});
 }
 
 /// @nodoc
-class __$VerifyOrderStatusRequestCopyWithImpl<$Res>
-    implements _$VerifyOrderStatusRequestCopyWith<$Res> {
-  __$VerifyOrderStatusRequestCopyWithImpl(this._self, this._then);
+class __$ResumeAppleOrderQueryParamsCopyWithImpl<$Res>
+    implements _$ResumeAppleOrderQueryParamsCopyWith<$Res> {
+  __$ResumeAppleOrderQueryParamsCopyWithImpl(this._self, this._then);
 
-  final _VerifyOrderStatusRequest _self;
-  final $Res Function(_VerifyOrderStatusRequest) _then;
+  final _ResumeAppleOrderQueryParams _self;
+  final $Res Function(_ResumeAppleOrderQueryParams) _then;
 
-  /// Create a copy of VerifyOrderStatusRequest
+  /// Create a copy of ResumeAppleOrderQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $Res call({
-    Object? orderId = freezed,
+    Object? signedPayload = null,
   }) {
-    return _then(_VerifyOrderStatusRequest(
-      orderId: freezed == orderId
-          ? _self.orderId
-          : orderId // ignore: cast_nullable_to_non_nullable
-              as String?,
+    return _then(_ResumeAppleOrderQueryParams(
+      signedPayload: null == signedPayload
+          ? _self.signedPayload
+          : signedPayload // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }

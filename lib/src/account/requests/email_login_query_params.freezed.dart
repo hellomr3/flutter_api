@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'resume_apple_order_request.dart';
+part of 'email_login_query_params.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,74 +13,81 @@ part of 'resume_apple_order_request.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$ResumeAppleOrderRequest {
-  String get signedPayload;
+mixin _$EmailLoginQueryParams {
+  String get email;
+  String get verifyCode;
 
-  /// Create a copy of ResumeAppleOrderRequest
+  /// Create a copy of EmailLoginQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  $ResumeAppleOrderRequestCopyWith<ResumeAppleOrderRequest> get copyWith =>
-      _$ResumeAppleOrderRequestCopyWithImpl<ResumeAppleOrderRequest>(
-          this as ResumeAppleOrderRequest, _$identity);
+  $EmailLoginQueryParamsCopyWith<EmailLoginQueryParams> get copyWith =>
+      _$EmailLoginQueryParamsCopyWithImpl<EmailLoginQueryParams>(
+          this as EmailLoginQueryParams, _$identity);
 
-  /// Serializes this ResumeAppleOrderRequest to a JSON map.
+  /// Serializes this EmailLoginQueryParams to a JSON map.
   Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ResumeAppleOrderRequest &&
-            (identical(other.signedPayload, signedPayload) ||
-                other.signedPayload == signedPayload));
+            other is EmailLoginQueryParams &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.verifyCode, verifyCode) ||
+                other.verifyCode == verifyCode));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, signedPayload);
+  int get hashCode => Object.hash(runtimeType, email, verifyCode);
 
   @override
   String toString() {
-    return 'ResumeAppleOrderRequest(signedPayload: $signedPayload)';
+    return 'EmailLoginQueryParams(email: $email, verifyCode: $verifyCode)';
   }
 }
 
 /// @nodoc
-abstract mixin class $ResumeAppleOrderRequestCopyWith<$Res> {
-  factory $ResumeAppleOrderRequestCopyWith(ResumeAppleOrderRequest value,
-          $Res Function(ResumeAppleOrderRequest) _then) =
-      _$ResumeAppleOrderRequestCopyWithImpl;
+abstract mixin class $EmailLoginQueryParamsCopyWith<$Res> {
+  factory $EmailLoginQueryParamsCopyWith(EmailLoginQueryParams value,
+          $Res Function(EmailLoginQueryParams) _then) =
+      _$EmailLoginQueryParamsCopyWithImpl;
   @useResult
-  $Res call({String signedPayload});
+  $Res call({String email, String verifyCode});
 }
 
 /// @nodoc
-class _$ResumeAppleOrderRequestCopyWithImpl<$Res>
-    implements $ResumeAppleOrderRequestCopyWith<$Res> {
-  _$ResumeAppleOrderRequestCopyWithImpl(this._self, this._then);
+class _$EmailLoginQueryParamsCopyWithImpl<$Res>
+    implements $EmailLoginQueryParamsCopyWith<$Res> {
+  _$EmailLoginQueryParamsCopyWithImpl(this._self, this._then);
 
-  final ResumeAppleOrderRequest _self;
-  final $Res Function(ResumeAppleOrderRequest) _then;
+  final EmailLoginQueryParams _self;
+  final $Res Function(EmailLoginQueryParams) _then;
 
-  /// Create a copy of ResumeAppleOrderRequest
+  /// Create a copy of EmailLoginQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? signedPayload = null,
+    Object? email = null,
+    Object? verifyCode = null,
   }) {
     return _then(_self.copyWith(
-      signedPayload: null == signedPayload
-          ? _self.signedPayload
-          : signedPayload // ignore: cast_nullable_to_non_nullable
+      email: null == email
+          ? _self.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      verifyCode: null == verifyCode
+          ? _self.verifyCode
+          : verifyCode // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
 }
 
-/// Adds pattern-matching-related methods to [ResumeAppleOrderRequest].
-extension ResumeAppleOrderRequestPatterns on ResumeAppleOrderRequest {
+/// Adds pattern-matching-related methods to [EmailLoginQueryParams].
+extension EmailLoginQueryParamsPatterns on EmailLoginQueryParams {
   /// A variant of `map` that fallback to returning `orElse`.
   ///
   /// It is equivalent to doing:
@@ -95,12 +102,12 @@ extension ResumeAppleOrderRequestPatterns on ResumeAppleOrderRequest {
 
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
-    TResult Function(_ResumeAppleOrderRequest value)? $default, {
+    TResult Function(_EmailLoginQueryParams value)? $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
-      case _ResumeAppleOrderRequest() when $default != null:
+      case _EmailLoginQueryParams() when $default != null:
         return $default(_that);
       case _:
         return orElse();
@@ -122,11 +129,11 @@ extension ResumeAppleOrderRequestPatterns on ResumeAppleOrderRequest {
 
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
-    TResult Function(_ResumeAppleOrderRequest value) $default,
+    TResult Function(_EmailLoginQueryParams value) $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _ResumeAppleOrderRequest():
+      case _EmailLoginQueryParams():
         return $default(_that);
       case _:
         throw StateError('Unexpected subclass');
@@ -147,11 +154,11 @@ extension ResumeAppleOrderRequestPatterns on ResumeAppleOrderRequest {
 
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_ResumeAppleOrderRequest value)? $default,
+    TResult? Function(_EmailLoginQueryParams value)? $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _ResumeAppleOrderRequest() when $default != null:
+      case _EmailLoginQueryParams() when $default != null:
         return $default(_that);
       case _:
         return null;
@@ -172,13 +179,13 @@ extension ResumeAppleOrderRequestPatterns on ResumeAppleOrderRequest {
 
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String signedPayload)? $default, {
+    TResult Function(String email, String verifyCode)? $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
-      case _ResumeAppleOrderRequest() when $default != null:
-        return $default(_that.signedPayload);
+      case _EmailLoginQueryParams() when $default != null:
+        return $default(_that.email, _that.verifyCode);
       case _:
         return orElse();
     }
@@ -199,12 +206,12 @@ extension ResumeAppleOrderRequestPatterns on ResumeAppleOrderRequest {
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String signedPayload) $default,
+    TResult Function(String email, String verifyCode) $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _ResumeAppleOrderRequest():
-        return $default(_that.signedPayload);
+      case _EmailLoginQueryParams():
+        return $default(_that.email, _that.verifyCode);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -224,12 +231,12 @@ extension ResumeAppleOrderRequestPatterns on ResumeAppleOrderRequest {
 
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(String signedPayload)? $default,
+    TResult? Function(String email, String verifyCode)? $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _ResumeAppleOrderRequest() when $default != null:
-        return $default(_that.signedPayload);
+      case _EmailLoginQueryParams() when $default != null:
+        return $default(_that.email, _that.verifyCode);
       case _:
         return null;
     }
@@ -238,26 +245,28 @@ extension ResumeAppleOrderRequestPatterns on ResumeAppleOrderRequest {
 
 /// @nodoc
 @JsonSerializable()
-class _ResumeAppleOrderRequest implements ResumeAppleOrderRequest {
-  const _ResumeAppleOrderRequest({required this.signedPayload});
-  factory _ResumeAppleOrderRequest.fromJson(Map<String, dynamic> json) =>
-      _$ResumeAppleOrderRequestFromJson(json);
+class _EmailLoginQueryParams implements EmailLoginQueryParams {
+  const _EmailLoginQueryParams({required this.email, required this.verifyCode});
+  factory _EmailLoginQueryParams.fromJson(Map<String, dynamic> json) =>
+      _$EmailLoginQueryParamsFromJson(json);
 
   @override
-  final String signedPayload;
+  final String email;
+  @override
+  final String verifyCode;
 
-  /// Create a copy of ResumeAppleOrderRequest
+  /// Create a copy of EmailLoginQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  _$ResumeAppleOrderRequestCopyWith<_ResumeAppleOrderRequest> get copyWith =>
-      __$ResumeAppleOrderRequestCopyWithImpl<_ResumeAppleOrderRequest>(
+  _$EmailLoginQueryParamsCopyWith<_EmailLoginQueryParams> get copyWith =>
+      __$EmailLoginQueryParamsCopyWithImpl<_EmailLoginQueryParams>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$ResumeAppleOrderRequestToJson(
+    return _$EmailLoginQueryParamsToJson(
       this,
     );
   }
@@ -266,51 +275,57 @@ class _ResumeAppleOrderRequest implements ResumeAppleOrderRequest {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ResumeAppleOrderRequest &&
-            (identical(other.signedPayload, signedPayload) ||
-                other.signedPayload == signedPayload));
+            other is _EmailLoginQueryParams &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.verifyCode, verifyCode) ||
+                other.verifyCode == verifyCode));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, signedPayload);
+  int get hashCode => Object.hash(runtimeType, email, verifyCode);
 
   @override
   String toString() {
-    return 'ResumeAppleOrderRequest(signedPayload: $signedPayload)';
+    return 'EmailLoginQueryParams(email: $email, verifyCode: $verifyCode)';
   }
 }
 
 /// @nodoc
-abstract mixin class _$ResumeAppleOrderRequestCopyWith<$Res>
-    implements $ResumeAppleOrderRequestCopyWith<$Res> {
-  factory _$ResumeAppleOrderRequestCopyWith(_ResumeAppleOrderRequest value,
-          $Res Function(_ResumeAppleOrderRequest) _then) =
-      __$ResumeAppleOrderRequestCopyWithImpl;
+abstract mixin class _$EmailLoginQueryParamsCopyWith<$Res>
+    implements $EmailLoginQueryParamsCopyWith<$Res> {
+  factory _$EmailLoginQueryParamsCopyWith(_EmailLoginQueryParams value,
+          $Res Function(_EmailLoginQueryParams) _then) =
+      __$EmailLoginQueryParamsCopyWithImpl;
   @override
   @useResult
-  $Res call({String signedPayload});
+  $Res call({String email, String verifyCode});
 }
 
 /// @nodoc
-class __$ResumeAppleOrderRequestCopyWithImpl<$Res>
-    implements _$ResumeAppleOrderRequestCopyWith<$Res> {
-  __$ResumeAppleOrderRequestCopyWithImpl(this._self, this._then);
+class __$EmailLoginQueryParamsCopyWithImpl<$Res>
+    implements _$EmailLoginQueryParamsCopyWith<$Res> {
+  __$EmailLoginQueryParamsCopyWithImpl(this._self, this._then);
 
-  final _ResumeAppleOrderRequest _self;
-  final $Res Function(_ResumeAppleOrderRequest) _then;
+  final _EmailLoginQueryParams _self;
+  final $Res Function(_EmailLoginQueryParams) _then;
 
-  /// Create a copy of ResumeAppleOrderRequest
+  /// Create a copy of EmailLoginQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $Res call({
-    Object? signedPayload = null,
+    Object? email = null,
+    Object? verifyCode = null,
   }) {
-    return _then(_ResumeAppleOrderRequest(
-      signedPayload: null == signedPayload
-          ? _self.signedPayload
-          : signedPayload // ignore: cast_nullable_to_non_nullable
+    return _then(_EmailLoginQueryParams(
+      email: null == email
+          ? _self.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      verifyCode: null == verifyCode
+          ? _self.verifyCode
+          : verifyCode // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }

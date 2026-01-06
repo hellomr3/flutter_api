@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'create_apple_order_request.dart';
+part of 'login_query_params.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,74 +13,82 @@ part of 'create_apple_order_request.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$CreateAppleOrderRequest {
-  String get productId;
+mixin _$LoginQueryParams {
+  String get password;
+  String get username;
 
-  /// Create a copy of CreateAppleOrderRequest
+  /// Create a copy of LoginQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  $CreateAppleOrderRequestCopyWith<CreateAppleOrderRequest> get copyWith =>
-      _$CreateAppleOrderRequestCopyWithImpl<CreateAppleOrderRequest>(
-          this as CreateAppleOrderRequest, _$identity);
+  $LoginQueryParamsCopyWith<LoginQueryParams> get copyWith =>
+      _$LoginQueryParamsCopyWithImpl<LoginQueryParams>(
+          this as LoginQueryParams, _$identity);
 
-  /// Serializes this CreateAppleOrderRequest to a JSON map.
+  /// Serializes this LoginQueryParams to a JSON map.
   Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is CreateAppleOrderRequest &&
-            (identical(other.productId, productId) ||
-                other.productId == productId));
+            other is LoginQueryParams &&
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.username, username) ||
+                other.username == username));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, productId);
+  int get hashCode => Object.hash(runtimeType, password, username);
 
   @override
   String toString() {
-    return 'CreateAppleOrderRequest(productId: $productId)';
+    return 'LoginQueryParams(password: $password, username: $username)';
   }
 }
 
 /// @nodoc
-abstract mixin class $CreateAppleOrderRequestCopyWith<$Res> {
-  factory $CreateAppleOrderRequestCopyWith(CreateAppleOrderRequest value,
-          $Res Function(CreateAppleOrderRequest) _then) =
-      _$CreateAppleOrderRequestCopyWithImpl;
+abstract mixin class $LoginQueryParamsCopyWith<$Res> {
+  factory $LoginQueryParamsCopyWith(
+          LoginQueryParams value, $Res Function(LoginQueryParams) _then) =
+      _$LoginQueryParamsCopyWithImpl;
   @useResult
-  $Res call({String productId});
+  $Res call({String password, String username});
 }
 
 /// @nodoc
-class _$CreateAppleOrderRequestCopyWithImpl<$Res>
-    implements $CreateAppleOrderRequestCopyWith<$Res> {
-  _$CreateAppleOrderRequestCopyWithImpl(this._self, this._then);
+class _$LoginQueryParamsCopyWithImpl<$Res>
+    implements $LoginQueryParamsCopyWith<$Res> {
+  _$LoginQueryParamsCopyWithImpl(this._self, this._then);
 
-  final CreateAppleOrderRequest _self;
-  final $Res Function(CreateAppleOrderRequest) _then;
+  final LoginQueryParams _self;
+  final $Res Function(LoginQueryParams) _then;
 
-  /// Create a copy of CreateAppleOrderRequest
+  /// Create a copy of LoginQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? productId = null,
+    Object? password = null,
+    Object? username = null,
   }) {
     return _then(_self.copyWith(
-      productId: null == productId
-          ? _self.productId
-          : productId // ignore: cast_nullable_to_non_nullable
+      password: null == password
+          ? _self.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+      username: null == username
+          ? _self.username
+          : username // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
 }
 
-/// Adds pattern-matching-related methods to [CreateAppleOrderRequest].
-extension CreateAppleOrderRequestPatterns on CreateAppleOrderRequest {
+/// Adds pattern-matching-related methods to [LoginQueryParams].
+extension LoginQueryParamsPatterns on LoginQueryParams {
   /// A variant of `map` that fallback to returning `orElse`.
   ///
   /// It is equivalent to doing:
@@ -95,12 +103,12 @@ extension CreateAppleOrderRequestPatterns on CreateAppleOrderRequest {
 
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
-    TResult Function(_CreateAppleOrderRequest value)? $default, {
+    TResult Function(_LoginQueryParams value)? $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
-      case _CreateAppleOrderRequest() when $default != null:
+      case _LoginQueryParams() when $default != null:
         return $default(_that);
       case _:
         return orElse();
@@ -122,11 +130,11 @@ extension CreateAppleOrderRequestPatterns on CreateAppleOrderRequest {
 
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
-    TResult Function(_CreateAppleOrderRequest value) $default,
+    TResult Function(_LoginQueryParams value) $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _CreateAppleOrderRequest():
+      case _LoginQueryParams():
         return $default(_that);
       case _:
         throw StateError('Unexpected subclass');
@@ -147,11 +155,11 @@ extension CreateAppleOrderRequestPatterns on CreateAppleOrderRequest {
 
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_CreateAppleOrderRequest value)? $default,
+    TResult? Function(_LoginQueryParams value)? $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _CreateAppleOrderRequest() when $default != null:
+      case _LoginQueryParams() when $default != null:
         return $default(_that);
       case _:
         return null;
@@ -172,13 +180,13 @@ extension CreateAppleOrderRequestPatterns on CreateAppleOrderRequest {
 
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String productId)? $default, {
+    TResult Function(String password, String username)? $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
-      case _CreateAppleOrderRequest() when $default != null:
-        return $default(_that.productId);
+      case _LoginQueryParams() when $default != null:
+        return $default(_that.password, _that.username);
       case _:
         return orElse();
     }
@@ -199,12 +207,12 @@ extension CreateAppleOrderRequestPatterns on CreateAppleOrderRequest {
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String productId) $default,
+    TResult Function(String password, String username) $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _CreateAppleOrderRequest():
-        return $default(_that.productId);
+      case _LoginQueryParams():
+        return $default(_that.password, _that.username);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -224,12 +232,12 @@ extension CreateAppleOrderRequestPatterns on CreateAppleOrderRequest {
 
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(String productId)? $default,
+    TResult? Function(String password, String username)? $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _CreateAppleOrderRequest() when $default != null:
-        return $default(_that.productId);
+      case _LoginQueryParams() when $default != null:
+        return $default(_that.password, _that.username);
       case _:
         return null;
     }
@@ -238,26 +246,27 @@ extension CreateAppleOrderRequestPatterns on CreateAppleOrderRequest {
 
 /// @nodoc
 @JsonSerializable()
-class _CreateAppleOrderRequest implements CreateAppleOrderRequest {
-  const _CreateAppleOrderRequest({required this.productId});
-  factory _CreateAppleOrderRequest.fromJson(Map<String, dynamic> json) =>
-      _$CreateAppleOrderRequestFromJson(json);
+class _LoginQueryParams implements LoginQueryParams {
+  const _LoginQueryParams({required this.password, required this.username});
+  factory _LoginQueryParams.fromJson(Map<String, dynamic> json) =>
+      _$LoginQueryParamsFromJson(json);
 
   @override
-  final String productId;
+  final String password;
+  @override
+  final String username;
 
-  /// Create a copy of CreateAppleOrderRequest
+  /// Create a copy of LoginQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  _$CreateAppleOrderRequestCopyWith<_CreateAppleOrderRequest> get copyWith =>
-      __$CreateAppleOrderRequestCopyWithImpl<_CreateAppleOrderRequest>(
-          this, _$identity);
+  _$LoginQueryParamsCopyWith<_LoginQueryParams> get copyWith =>
+      __$LoginQueryParamsCopyWithImpl<_LoginQueryParams>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$CreateAppleOrderRequestToJson(
+    return _$LoginQueryParamsToJson(
       this,
     );
   }
@@ -266,51 +275,58 @@ class _CreateAppleOrderRequest implements CreateAppleOrderRequest {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CreateAppleOrderRequest &&
-            (identical(other.productId, productId) ||
-                other.productId == productId));
+            other is _LoginQueryParams &&
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.username, username) ||
+                other.username == username));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, productId);
+  int get hashCode => Object.hash(runtimeType, password, username);
 
   @override
   String toString() {
-    return 'CreateAppleOrderRequest(productId: $productId)';
+    return 'LoginQueryParams(password: $password, username: $username)';
   }
 }
 
 /// @nodoc
-abstract mixin class _$CreateAppleOrderRequestCopyWith<$Res>
-    implements $CreateAppleOrderRequestCopyWith<$Res> {
-  factory _$CreateAppleOrderRequestCopyWith(_CreateAppleOrderRequest value,
-          $Res Function(_CreateAppleOrderRequest) _then) =
-      __$CreateAppleOrderRequestCopyWithImpl;
+abstract mixin class _$LoginQueryParamsCopyWith<$Res>
+    implements $LoginQueryParamsCopyWith<$Res> {
+  factory _$LoginQueryParamsCopyWith(
+          _LoginQueryParams value, $Res Function(_LoginQueryParams) _then) =
+      __$LoginQueryParamsCopyWithImpl;
   @override
   @useResult
-  $Res call({String productId});
+  $Res call({String password, String username});
 }
 
 /// @nodoc
-class __$CreateAppleOrderRequestCopyWithImpl<$Res>
-    implements _$CreateAppleOrderRequestCopyWith<$Res> {
-  __$CreateAppleOrderRequestCopyWithImpl(this._self, this._then);
+class __$LoginQueryParamsCopyWithImpl<$Res>
+    implements _$LoginQueryParamsCopyWith<$Res> {
+  __$LoginQueryParamsCopyWithImpl(this._self, this._then);
 
-  final _CreateAppleOrderRequest _self;
-  final $Res Function(_CreateAppleOrderRequest) _then;
+  final _LoginQueryParams _self;
+  final $Res Function(_LoginQueryParams) _then;
 
-  /// Create a copy of CreateAppleOrderRequest
+  /// Create a copy of LoginQueryParams
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $Res call({
-    Object? productId = null,
+    Object? password = null,
+    Object? username = null,
   }) {
-    return _then(_CreateAppleOrderRequest(
-      productId: null == productId
-          ? _self.productId
-          : productId // ignore: cast_nullable_to_non_nullable
+    return _then(_LoginQueryParams(
+      password: null == password
+          ? _self.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+      username: null == username
+          ? _self.username
+          : username // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }

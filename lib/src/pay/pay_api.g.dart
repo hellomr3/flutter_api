@@ -49,7 +49,7 @@ class _PayApi implements PayApi {
 
   @override
   Future<ApiResponse<CreateOrderResp>> createOrderV3(
-    CreateOrderRequest params,
+    CreateOrderQueryParams params,
   ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -81,7 +81,7 @@ class _PayApi implements PayApi {
 
   @override
   Future<ApiResponse<OrderStatusResp>> surePay(
-    VerifyOrderStatusRequest params,
+    VerifyOrderStatusQueryParams params,
   ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -113,7 +113,7 @@ class _PayApi implements PayApi {
 
   @override
   Future<ApiResponse<CreateOrderNetModel>> createAppleOrder(
-    CreateAppleOrderRequest params,
+    CreateAppleOrderQueryParams params,
   ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -145,7 +145,7 @@ class _PayApi implements PayApi {
 
   @override
   Future<ApiResponse<void>> resumeAppleOrder(
-    ResumeAppleOrderRequest params,
+    ResumeAppleOrderQueryParams params,
   ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};

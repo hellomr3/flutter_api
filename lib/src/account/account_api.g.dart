@@ -18,7 +18,9 @@ class _AccountApi implements AccountApi {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<ApiResponse<LoginResponse>> register(RegisterParams request) async {
+  Future<ApiResponse<LoginResponse>> register(
+    RegisterQueryParams request,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -48,7 +50,7 @@ class _AccountApi implements AccountApi {
   }
 
   @override
-  Future<ApiResponse<LoginResponse>> login(LoginRequest request) async {
+  Future<ApiResponse<LoginResponse>> login(LoginQueryParams request) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -108,7 +110,9 @@ class _AccountApi implements AccountApi {
   }
 
   @override
-  Future<ApiResponse<HwLoginResponse>> hwLogin(HwLoginRequest request) async {
+  Future<ApiResponse<HwLoginResponse>> hwLogin(
+    HwLoginQueryParams request,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -139,7 +143,7 @@ class _AccountApi implements AccountApi {
 
   @override
   Future<ApiResponse<LoginResponse>> emailLogin(
-    EmailLoginRequest request,
+    EmailLoginQueryParams request,
   ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -170,7 +174,9 @@ class _AccountApi implements AccountApi {
   }
 
   @override
-  Future<ApiResponse<void>> sendEmailCode(SendEmailCodeRequest request) async {
+  Future<ApiResponse<void>> sendEmailCode(
+    SendEmailCodeQueryParams request,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};

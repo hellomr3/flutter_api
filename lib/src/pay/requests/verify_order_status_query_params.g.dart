@@ -1,19 +1,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'verify_order_status_request.dart';
+part of 'verify_order_status_query_params.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_VerifyOrderStatusRequest _$VerifyOrderStatusRequestFromJson(
+_VerifyOrderStatusQueryParams _$VerifyOrderStatusQueryParamsFromJson(
         Map<String, dynamic> json) =>
-    _VerifyOrderStatusRequest(
+    _VerifyOrderStatusQueryParams(
       orderId: json['orderId'] as String?,
     );
 
-Map<String, dynamic> _$VerifyOrderStatusRequestToJson(
-        _VerifyOrderStatusRequest instance) =>
+Map<String, dynamic> _$VerifyOrderStatusQueryParamsToJson(
+        _VerifyOrderStatusQueryParams instance) =>
     <String, dynamic>{
       'orderId': instance.orderId,
     };
