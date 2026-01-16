@@ -1,21 +1,21 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'participate_activity_query_params.dart';
+part of 'participate_activity_query_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ParticipateActivityQueryParams _$ParticipateActivityQueryParamsFromJson(
+_ParticipateActivityQueryModel _$ParticipateActivityQueryModelFromJson(
         Map<String, dynamic> json) =>
-    _ParticipateActivityQueryParams(
+    _ParticipateActivityQueryModel(
       activityId: json['activityId'] as String,
       submitContent: json['submitContent'] as String?,
       imageUrl: json['imageUrl'] as String?,
     );
 
-Map<String, dynamic> _$ParticipateActivityQueryParamsToJson(
-        _ParticipateActivityQueryParams instance) =>
+Map<String, dynamic> _$ParticipateActivityQueryModelToJson(
+        _ParticipateActivityQueryModel instance) =>
     <String, dynamic>{
       'activityId': instance.activityId,
       'submitContent': instance.submitContent,

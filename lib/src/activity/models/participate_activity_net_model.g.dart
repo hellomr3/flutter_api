@@ -1,19 +1,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'participate_activity_resp.dart';
+part of 'participate_activity_net_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ParticipateActivityResp _$ParticipateActivityRespFromJson(
+_ParticipateActivityNetModel _$ParticipateActivityNetModelFromJson(
         Map<String, dynamic> json) =>
-    _ParticipateActivityResp(
-      message: json['message'] as String,
+    _ParticipateActivityNetModel(
+      message: json['message'] as String?,
     );
 
-Map<String, dynamic> _$ParticipateActivityRespToJson(
-        _ParticipateActivityResp instance) =>
+Map<String, dynamic> _$ParticipateActivityNetModelToJson(
+        _ParticipateActivityNetModel instance) =>
     <String, dynamic>{
       'message': instance.message,
     };

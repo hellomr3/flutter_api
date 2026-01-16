@@ -18,12 +18,12 @@ class _ActivityApi implements ActivityApi {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<ApiList<ActivityModel>> getActivityListV2() async {
+  Future<ApiList<ActivityNetModel>> getActivityListV2() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<ApiList<ActivityModel>>(
+    final _options = _setStreamType<ApiList<ActivityNetModel>>(
       Options(method: 'GET', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
@@ -34,11 +34,11 @@ class _ActivityApi implements ActivityApi {
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late ApiList<ActivityModel> _value;
+    late ApiList<ActivityNetModel> _value;
     try {
-      _value = ApiList<ActivityModel>.fromJson(
+      _value = ApiList<ActivityNetModel>.fromJson(
         _result.data!,
-        (json) => ActivityModel.fromJson(json as Map<String, dynamic>),
+        (json) => ActivityNetModel.fromJson(json as Map<String, dynamic>),
       );
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
@@ -48,14 +48,14 @@ class _ActivityApi implements ActivityApi {
   }
 
   @override
-  Future<ApiResponse<ParticipateActivityResp>> participateActivity(
-    ParticipateActivityQueryParams request,
+  Future<ApiResponse<ParticipateActivityNetModel>> participateActivity(
+    ParticipateActivityQueryModel request,
   ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = request;
-    final _options = _setStreamType<ApiResponse<ParticipateActivityResp>>(
+    final _options = _setStreamType<ApiResponse<ParticipateActivityNetModel>>(
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
@@ -66,12 +66,12 @@ class _ActivityApi implements ActivityApi {
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late ApiResponse<ParticipateActivityResp> _value;
+    late ApiResponse<ParticipateActivityNetModel> _value;
     try {
-      _value = ApiResponse<ParticipateActivityResp>.fromJson(
+      _value = ApiResponse<ParticipateActivityNetModel>.fromJson(
         _result.data!,
         (json) =>
-            ParticipateActivityResp.fromJson(json as Map<String, dynamic>),
+            ParticipateActivityNetModel.fromJson(json as Map<String, dynamic>),
       );
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);

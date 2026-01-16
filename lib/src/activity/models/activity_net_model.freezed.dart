@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'activity_model.dart';
+part of 'activity_net_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,41 +13,41 @@ part of 'activity_model.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$ActivityModel {
-  String get id;
-  String get title;
-  String get content;
-  String get createTime;
-  String get award;
-  int get awardDays;
-  String get submitTips;
+mixin _$ActivityNetModel {
+  String? get id;
+  String? get title;
+  String? get content;
+  String? get createTime;
+  String? get award;
+  int? get awardDays;
+  String? get submitTips;
   String? get actionType;
   String? get actionValue;
   String? get interactionType;
   String? get copyContent;
-  String get buttonText;
-  int get userParticipationLimit;
-  int get totalStockLimit;
-  int get currentStock;
-  bool get canParticipate;
-  int get remainingStock;
+  String? get buttonText;
+  int? get userParticipationLimit;
+  int? get totalStockLimit;
+  int? get currentStock;
+  bool? get canParticipate;
+  int? get remainingStock;
 
-  /// Create a copy of ActivityModel
+  /// Create a copy of ActivityNetModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  $ActivityModelCopyWith<ActivityModel> get copyWith =>
-      _$ActivityModelCopyWithImpl<ActivityModel>(
-          this as ActivityModel, _$identity);
+  $ActivityNetModelCopyWith<ActivityNetModel> get copyWith =>
+      _$ActivityNetModelCopyWithImpl<ActivityNetModel>(
+          this as ActivityNetModel, _$identity);
 
-  /// Serializes this ActivityModel to a JSON map.
+  /// Serializes this ActivityNetModel to a JSON map.
   Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ActivityModel &&
+            other is ActivityNetModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.content, content) || other.content == content) &&
@@ -104,96 +104,96 @@ mixin _$ActivityModel {
 
   @override
   String toString() {
-    return 'ActivityModel(id: $id, title: $title, content: $content, createTime: $createTime, award: $award, awardDays: $awardDays, submitTips: $submitTips, actionType: $actionType, actionValue: $actionValue, interactionType: $interactionType, copyContent: $copyContent, buttonText: $buttonText, userParticipationLimit: $userParticipationLimit, totalStockLimit: $totalStockLimit, currentStock: $currentStock, canParticipate: $canParticipate, remainingStock: $remainingStock)';
+    return 'ActivityNetModel(id: $id, title: $title, content: $content, createTime: $createTime, award: $award, awardDays: $awardDays, submitTips: $submitTips, actionType: $actionType, actionValue: $actionValue, interactionType: $interactionType, copyContent: $copyContent, buttonText: $buttonText, userParticipationLimit: $userParticipationLimit, totalStockLimit: $totalStockLimit, currentStock: $currentStock, canParticipate: $canParticipate, remainingStock: $remainingStock)';
   }
 }
 
 /// @nodoc
-abstract mixin class $ActivityModelCopyWith<$Res> {
-  factory $ActivityModelCopyWith(
-          ActivityModel value, $Res Function(ActivityModel) _then) =
-      _$ActivityModelCopyWithImpl;
+abstract mixin class $ActivityNetModelCopyWith<$Res> {
+  factory $ActivityNetModelCopyWith(
+          ActivityNetModel value, $Res Function(ActivityNetModel) _then) =
+      _$ActivityNetModelCopyWithImpl;
   @useResult
   $Res call(
-      {String id,
-      String title,
-      String content,
-      String createTime,
-      String award,
-      int awardDays,
-      String submitTips,
+      {String? id,
+      String? title,
+      String? content,
+      String? createTime,
+      String? award,
+      int? awardDays,
+      String? submitTips,
       String? actionType,
       String? actionValue,
       String? interactionType,
       String? copyContent,
-      String buttonText,
-      int userParticipationLimit,
-      int totalStockLimit,
-      int currentStock,
-      bool canParticipate,
-      int remainingStock});
+      String? buttonText,
+      int? userParticipationLimit,
+      int? totalStockLimit,
+      int? currentStock,
+      bool? canParticipate,
+      int? remainingStock});
 }
 
 /// @nodoc
-class _$ActivityModelCopyWithImpl<$Res>
-    implements $ActivityModelCopyWith<$Res> {
-  _$ActivityModelCopyWithImpl(this._self, this._then);
+class _$ActivityNetModelCopyWithImpl<$Res>
+    implements $ActivityNetModelCopyWith<$Res> {
+  _$ActivityNetModelCopyWithImpl(this._self, this._then);
 
-  final ActivityModel _self;
-  final $Res Function(ActivityModel) _then;
+  final ActivityNetModel _self;
+  final $Res Function(ActivityNetModel) _then;
 
-  /// Create a copy of ActivityModel
+  /// Create a copy of ActivityNetModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? title = null,
-    Object? content = null,
-    Object? createTime = null,
-    Object? award = null,
-    Object? awardDays = null,
-    Object? submitTips = null,
+    Object? id = freezed,
+    Object? title = freezed,
+    Object? content = freezed,
+    Object? createTime = freezed,
+    Object? award = freezed,
+    Object? awardDays = freezed,
+    Object? submitTips = freezed,
     Object? actionType = freezed,
     Object? actionValue = freezed,
     Object? interactionType = freezed,
     Object? copyContent = freezed,
-    Object? buttonText = null,
-    Object? userParticipationLimit = null,
-    Object? totalStockLimit = null,
-    Object? currentStock = null,
-    Object? canParticipate = null,
-    Object? remainingStock = null,
+    Object? buttonText = freezed,
+    Object? userParticipationLimit = freezed,
+    Object? totalStockLimit = freezed,
+    Object? currentStock = freezed,
+    Object? canParticipate = freezed,
+    Object? remainingStock = freezed,
   }) {
     return _then(_self.copyWith(
-      id: null == id
+      id: freezed == id
           ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
+              as String?,
+      title: freezed == title
           ? _self.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      content: null == content
+              as String?,
+      content: freezed == content
           ? _self.content
           : content // ignore: cast_nullable_to_non_nullable
-              as String,
-      createTime: null == createTime
+              as String?,
+      createTime: freezed == createTime
           ? _self.createTime
           : createTime // ignore: cast_nullable_to_non_nullable
-              as String,
-      award: null == award
+              as String?,
+      award: freezed == award
           ? _self.award
           : award // ignore: cast_nullable_to_non_nullable
-              as String,
-      awardDays: null == awardDays
+              as String?,
+      awardDays: freezed == awardDays
           ? _self.awardDays
           : awardDays // ignore: cast_nullable_to_non_nullable
-              as int,
-      submitTips: null == submitTips
+              as int?,
+      submitTips: freezed == submitTips
           ? _self.submitTips
           : submitTips // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       actionType: freezed == actionType
           ? _self.actionType
           : actionType // ignore: cast_nullable_to_non_nullable
@@ -210,36 +210,36 @@ class _$ActivityModelCopyWithImpl<$Res>
           ? _self.copyContent
           : copyContent // ignore: cast_nullable_to_non_nullable
               as String?,
-      buttonText: null == buttonText
+      buttonText: freezed == buttonText
           ? _self.buttonText
           : buttonText // ignore: cast_nullable_to_non_nullable
-              as String,
-      userParticipationLimit: null == userParticipationLimit
+              as String?,
+      userParticipationLimit: freezed == userParticipationLimit
           ? _self.userParticipationLimit
           : userParticipationLimit // ignore: cast_nullable_to_non_nullable
-              as int,
-      totalStockLimit: null == totalStockLimit
+              as int?,
+      totalStockLimit: freezed == totalStockLimit
           ? _self.totalStockLimit
           : totalStockLimit // ignore: cast_nullable_to_non_nullable
-              as int,
-      currentStock: null == currentStock
+              as int?,
+      currentStock: freezed == currentStock
           ? _self.currentStock
           : currentStock // ignore: cast_nullable_to_non_nullable
-              as int,
-      canParticipate: null == canParticipate
+              as int?,
+      canParticipate: freezed == canParticipate
           ? _self.canParticipate
           : canParticipate // ignore: cast_nullable_to_non_nullable
-              as bool,
-      remainingStock: null == remainingStock
+              as bool?,
+      remainingStock: freezed == remainingStock
           ? _self.remainingStock
           : remainingStock // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
 
-/// Adds pattern-matching-related methods to [ActivityModel].
-extension ActivityModelPatterns on ActivityModel {
+/// Adds pattern-matching-related methods to [ActivityNetModel].
+extension ActivityNetModelPatterns on ActivityNetModel {
   /// A variant of `map` that fallback to returning `orElse`.
   ///
   /// It is equivalent to doing:
@@ -254,12 +254,12 @@ extension ActivityModelPatterns on ActivityModel {
 
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
-    TResult Function(_ActivityModel value)? $default, {
+    TResult Function(_ActivityNetModel value)? $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
-      case _ActivityModel() when $default != null:
+      case _ActivityNetModel() when $default != null:
         return $default(_that);
       case _:
         return orElse();
@@ -281,11 +281,11 @@ extension ActivityModelPatterns on ActivityModel {
 
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
-    TResult Function(_ActivityModel value) $default,
+    TResult Function(_ActivityNetModel value) $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _ActivityModel():
+      case _ActivityNetModel():
         return $default(_that);
       case _:
         throw StateError('Unexpected subclass');
@@ -306,11 +306,11 @@ extension ActivityModelPatterns on ActivityModel {
 
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_ActivityModel value)? $default,
+    TResult? Function(_ActivityNetModel value)? $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _ActivityModel() when $default != null:
+      case _ActivityNetModel() when $default != null:
         return $default(_that);
       case _:
         return null;
@@ -332,29 +332,29 @@ extension ActivityModelPatterns on ActivityModel {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(
-            String id,
-            String title,
-            String content,
-            String createTime,
-            String award,
-            int awardDays,
-            String submitTips,
+            String? id,
+            String? title,
+            String? content,
+            String? createTime,
+            String? award,
+            int? awardDays,
+            String? submitTips,
             String? actionType,
             String? actionValue,
             String? interactionType,
             String? copyContent,
-            String buttonText,
-            int userParticipationLimit,
-            int totalStockLimit,
-            int currentStock,
-            bool canParticipate,
-            int remainingStock)?
+            String? buttonText,
+            int? userParticipationLimit,
+            int? totalStockLimit,
+            int? currentStock,
+            bool? canParticipate,
+            int? remainingStock)?
         $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
-      case _ActivityModel() when $default != null:
+      case _ActivityNetModel() when $default != null:
         return $default(
             _that.id,
             _that.title,
@@ -394,28 +394,28 @@ extension ActivityModelPatterns on ActivityModel {
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function(
-            String id,
-            String title,
-            String content,
-            String createTime,
-            String award,
-            int awardDays,
-            String submitTips,
+            String? id,
+            String? title,
+            String? content,
+            String? createTime,
+            String? award,
+            int? awardDays,
+            String? submitTips,
             String? actionType,
             String? actionValue,
             String? interactionType,
             String? copyContent,
-            String buttonText,
-            int userParticipationLimit,
-            int totalStockLimit,
-            int currentStock,
-            bool canParticipate,
-            int remainingStock)
+            String? buttonText,
+            int? userParticipationLimit,
+            int? totalStockLimit,
+            int? currentStock,
+            bool? canParticipate,
+            int? remainingStock)
         $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _ActivityModel():
+      case _ActivityNetModel():
         return $default(
             _that.id,
             _that.title,
@@ -454,28 +454,28 @@ extension ActivityModelPatterns on ActivityModel {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
     TResult? Function(
-            String id,
-            String title,
-            String content,
-            String createTime,
-            String award,
-            int awardDays,
-            String submitTips,
+            String? id,
+            String? title,
+            String? content,
+            String? createTime,
+            String? award,
+            int? awardDays,
+            String? submitTips,
             String? actionType,
             String? actionValue,
             String? interactionType,
             String? copyContent,
-            String buttonText,
-            int userParticipationLimit,
-            int totalStockLimit,
-            int currentStock,
-            bool canParticipate,
-            int remainingStock)?
+            String? buttonText,
+            int? userParticipationLimit,
+            int? totalStockLimit,
+            int? currentStock,
+            bool? canParticipate,
+            int? remainingStock)?
         $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _ActivityModel() when $default != null:
+      case _ActivityNetModel() when $default != null:
         return $default(
             _that.id,
             _that.title,
@@ -502,42 +502,42 @@ extension ActivityModelPatterns on ActivityModel {
 
 /// @nodoc
 @JsonSerializable()
-class _ActivityModel implements ActivityModel {
-  const _ActivityModel(
-      {required this.id,
-      required this.title,
-      required this.content,
-      required this.createTime,
-      required this.award,
-      required this.awardDays,
-      required this.submitTips,
+class _ActivityNetModel implements ActivityNetModel {
+  const _ActivityNetModel(
+      {this.id,
+      this.title,
+      this.content,
+      this.createTime,
+      this.award,
+      this.awardDays,
+      this.submitTips,
       this.actionType,
       this.actionValue,
       this.interactionType,
       this.copyContent,
-      required this.buttonText,
-      required this.userParticipationLimit,
-      required this.totalStockLimit,
-      required this.currentStock,
-      required this.canParticipate,
-      required this.remainingStock});
-  factory _ActivityModel.fromJson(Map<String, dynamic> json) =>
-      _$ActivityModelFromJson(json);
+      this.buttonText,
+      this.userParticipationLimit,
+      this.totalStockLimit,
+      this.currentStock,
+      this.canParticipate,
+      this.remainingStock});
+  factory _ActivityNetModel.fromJson(Map<String, dynamic> json) =>
+      _$ActivityNetModelFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
-  final String title;
+  final String? title;
   @override
-  final String content;
+  final String? content;
   @override
-  final String createTime;
+  final String? createTime;
   @override
-  final String award;
+  final String? award;
   @override
-  final int awardDays;
+  final int? awardDays;
   @override
-  final String submitTips;
+  final String? submitTips;
   @override
   final String? actionType;
   @override
@@ -547,29 +547,29 @@ class _ActivityModel implements ActivityModel {
   @override
   final String? copyContent;
   @override
-  final String buttonText;
+  final String? buttonText;
   @override
-  final int userParticipationLimit;
+  final int? userParticipationLimit;
   @override
-  final int totalStockLimit;
+  final int? totalStockLimit;
   @override
-  final int currentStock;
+  final int? currentStock;
   @override
-  final bool canParticipate;
+  final bool? canParticipate;
   @override
-  final int remainingStock;
+  final int? remainingStock;
 
-  /// Create a copy of ActivityModel
+  /// Create a copy of ActivityNetModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  _$ActivityModelCopyWith<_ActivityModel> get copyWith =>
-      __$ActivityModelCopyWithImpl<_ActivityModel>(this, _$identity);
+  _$ActivityNetModelCopyWith<_ActivityNetModel> get copyWith =>
+      __$ActivityNetModelCopyWithImpl<_ActivityNetModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$ActivityModelToJson(
+    return _$ActivityNetModelToJson(
       this,
     );
   }
@@ -578,7 +578,7 @@ class _ActivityModel implements ActivityModel {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ActivityModel &&
+            other is _ActivityNetModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.content, content) || other.content == content) &&
@@ -635,98 +635,98 @@ class _ActivityModel implements ActivityModel {
 
   @override
   String toString() {
-    return 'ActivityModel(id: $id, title: $title, content: $content, createTime: $createTime, award: $award, awardDays: $awardDays, submitTips: $submitTips, actionType: $actionType, actionValue: $actionValue, interactionType: $interactionType, copyContent: $copyContent, buttonText: $buttonText, userParticipationLimit: $userParticipationLimit, totalStockLimit: $totalStockLimit, currentStock: $currentStock, canParticipate: $canParticipate, remainingStock: $remainingStock)';
+    return 'ActivityNetModel(id: $id, title: $title, content: $content, createTime: $createTime, award: $award, awardDays: $awardDays, submitTips: $submitTips, actionType: $actionType, actionValue: $actionValue, interactionType: $interactionType, copyContent: $copyContent, buttonText: $buttonText, userParticipationLimit: $userParticipationLimit, totalStockLimit: $totalStockLimit, currentStock: $currentStock, canParticipate: $canParticipate, remainingStock: $remainingStock)';
   }
 }
 
 /// @nodoc
-abstract mixin class _$ActivityModelCopyWith<$Res>
-    implements $ActivityModelCopyWith<$Res> {
-  factory _$ActivityModelCopyWith(
-          _ActivityModel value, $Res Function(_ActivityModel) _then) =
-      __$ActivityModelCopyWithImpl;
+abstract mixin class _$ActivityNetModelCopyWith<$Res>
+    implements $ActivityNetModelCopyWith<$Res> {
+  factory _$ActivityNetModelCopyWith(
+          _ActivityNetModel value, $Res Function(_ActivityNetModel) _then) =
+      __$ActivityNetModelCopyWithImpl;
   @override
   @useResult
   $Res call(
-      {String id,
-      String title,
-      String content,
-      String createTime,
-      String award,
-      int awardDays,
-      String submitTips,
+      {String? id,
+      String? title,
+      String? content,
+      String? createTime,
+      String? award,
+      int? awardDays,
+      String? submitTips,
       String? actionType,
       String? actionValue,
       String? interactionType,
       String? copyContent,
-      String buttonText,
-      int userParticipationLimit,
-      int totalStockLimit,
-      int currentStock,
-      bool canParticipate,
-      int remainingStock});
+      String? buttonText,
+      int? userParticipationLimit,
+      int? totalStockLimit,
+      int? currentStock,
+      bool? canParticipate,
+      int? remainingStock});
 }
 
 /// @nodoc
-class __$ActivityModelCopyWithImpl<$Res>
-    implements _$ActivityModelCopyWith<$Res> {
-  __$ActivityModelCopyWithImpl(this._self, this._then);
+class __$ActivityNetModelCopyWithImpl<$Res>
+    implements _$ActivityNetModelCopyWith<$Res> {
+  __$ActivityNetModelCopyWithImpl(this._self, this._then);
 
-  final _ActivityModel _self;
-  final $Res Function(_ActivityModel) _then;
+  final _ActivityNetModel _self;
+  final $Res Function(_ActivityNetModel) _then;
 
-  /// Create a copy of ActivityModel
+  /// Create a copy of ActivityNetModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $Res call({
-    Object? id = null,
-    Object? title = null,
-    Object? content = null,
-    Object? createTime = null,
-    Object? award = null,
-    Object? awardDays = null,
-    Object? submitTips = null,
+    Object? id = freezed,
+    Object? title = freezed,
+    Object? content = freezed,
+    Object? createTime = freezed,
+    Object? award = freezed,
+    Object? awardDays = freezed,
+    Object? submitTips = freezed,
     Object? actionType = freezed,
     Object? actionValue = freezed,
     Object? interactionType = freezed,
     Object? copyContent = freezed,
-    Object? buttonText = null,
-    Object? userParticipationLimit = null,
-    Object? totalStockLimit = null,
-    Object? currentStock = null,
-    Object? canParticipate = null,
-    Object? remainingStock = null,
+    Object? buttonText = freezed,
+    Object? userParticipationLimit = freezed,
+    Object? totalStockLimit = freezed,
+    Object? currentStock = freezed,
+    Object? canParticipate = freezed,
+    Object? remainingStock = freezed,
   }) {
-    return _then(_ActivityModel(
-      id: null == id
+    return _then(_ActivityNetModel(
+      id: freezed == id
           ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
+              as String?,
+      title: freezed == title
           ? _self.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      content: null == content
+              as String?,
+      content: freezed == content
           ? _self.content
           : content // ignore: cast_nullable_to_non_nullable
-              as String,
-      createTime: null == createTime
+              as String?,
+      createTime: freezed == createTime
           ? _self.createTime
           : createTime // ignore: cast_nullable_to_non_nullable
-              as String,
-      award: null == award
+              as String?,
+      award: freezed == award
           ? _self.award
           : award // ignore: cast_nullable_to_non_nullable
-              as String,
-      awardDays: null == awardDays
+              as String?,
+      awardDays: freezed == awardDays
           ? _self.awardDays
           : awardDays // ignore: cast_nullable_to_non_nullable
-              as int,
-      submitTips: null == submitTips
+              as int?,
+      submitTips: freezed == submitTips
           ? _self.submitTips
           : submitTips // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       actionType: freezed == actionType
           ? _self.actionType
           : actionType // ignore: cast_nullable_to_non_nullable
@@ -743,30 +743,30 @@ class __$ActivityModelCopyWithImpl<$Res>
           ? _self.copyContent
           : copyContent // ignore: cast_nullable_to_non_nullable
               as String?,
-      buttonText: null == buttonText
+      buttonText: freezed == buttonText
           ? _self.buttonText
           : buttonText // ignore: cast_nullable_to_non_nullable
-              as String,
-      userParticipationLimit: null == userParticipationLimit
+              as String?,
+      userParticipationLimit: freezed == userParticipationLimit
           ? _self.userParticipationLimit
           : userParticipationLimit // ignore: cast_nullable_to_non_nullable
-              as int,
-      totalStockLimit: null == totalStockLimit
+              as int?,
+      totalStockLimit: freezed == totalStockLimit
           ? _self.totalStockLimit
           : totalStockLimit // ignore: cast_nullable_to_non_nullable
-              as int,
-      currentStock: null == currentStock
+              as int?,
+      currentStock: freezed == currentStock
           ? _self.currentStock
           : currentStock // ignore: cast_nullable_to_non_nullable
-              as int,
-      canParticipate: null == canParticipate
+              as int?,
+      canParticipate: freezed == canParticipate
           ? _self.canParticipate
           : canParticipate // ignore: cast_nullable_to_non_nullable
-              as bool,
-      remainingStock: null == remainingStock
+              as bool?,
+      remainingStock: freezed == remainingStock
           ? _self.remainingStock
           : remainingStock // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }

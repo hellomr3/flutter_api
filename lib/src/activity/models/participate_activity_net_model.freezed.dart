@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'participate_activity_resp.dart';
+part of 'participate_activity_net_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,25 +13,26 @@ part of 'participate_activity_resp.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$ParticipateActivityResp {
-  String get message;
+mixin _$ParticipateActivityNetModel {
+  String? get message;
 
-  /// Create a copy of ParticipateActivityResp
+  /// Create a copy of ParticipateActivityNetModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  $ParticipateActivityRespCopyWith<ParticipateActivityResp> get copyWith =>
-      _$ParticipateActivityRespCopyWithImpl<ParticipateActivityResp>(
-          this as ParticipateActivityResp, _$identity);
+  $ParticipateActivityNetModelCopyWith<ParticipateActivityNetModel>
+      get copyWith => _$ParticipateActivityNetModelCopyWithImpl<
+              ParticipateActivityNetModel>(
+          this as ParticipateActivityNetModel, _$identity);
 
-  /// Serializes this ParticipateActivityResp to a JSON map.
+  /// Serializes this ParticipateActivityNetModel to a JSON map.
   Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ParticipateActivityResp &&
+            other is ParticipateActivityNetModel &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -41,45 +42,46 @@ mixin _$ParticipateActivityResp {
 
   @override
   String toString() {
-    return 'ParticipateActivityResp(message: $message)';
+    return 'ParticipateActivityNetModel(message: $message)';
   }
 }
 
 /// @nodoc
-abstract mixin class $ParticipateActivityRespCopyWith<$Res> {
-  factory $ParticipateActivityRespCopyWith(ParticipateActivityResp value,
-          $Res Function(ParticipateActivityResp) _then) =
-      _$ParticipateActivityRespCopyWithImpl;
+abstract mixin class $ParticipateActivityNetModelCopyWith<$Res> {
+  factory $ParticipateActivityNetModelCopyWith(
+          ParticipateActivityNetModel value,
+          $Res Function(ParticipateActivityNetModel) _then) =
+      _$ParticipateActivityNetModelCopyWithImpl;
   @useResult
-  $Res call({String message});
+  $Res call({String? message});
 }
 
 /// @nodoc
-class _$ParticipateActivityRespCopyWithImpl<$Res>
-    implements $ParticipateActivityRespCopyWith<$Res> {
-  _$ParticipateActivityRespCopyWithImpl(this._self, this._then);
+class _$ParticipateActivityNetModelCopyWithImpl<$Res>
+    implements $ParticipateActivityNetModelCopyWith<$Res> {
+  _$ParticipateActivityNetModelCopyWithImpl(this._self, this._then);
 
-  final ParticipateActivityResp _self;
-  final $Res Function(ParticipateActivityResp) _then;
+  final ParticipateActivityNetModel _self;
+  final $Res Function(ParticipateActivityNetModel) _then;
 
-  /// Create a copy of ParticipateActivityResp
+  /// Create a copy of ParticipateActivityNetModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = null,
+    Object? message = freezed,
   }) {
     return _then(_self.copyWith(
-      message: null == message
+      message: freezed == message
           ? _self.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
 
-/// Adds pattern-matching-related methods to [ParticipateActivityResp].
-extension ParticipateActivityRespPatterns on ParticipateActivityResp {
+/// Adds pattern-matching-related methods to [ParticipateActivityNetModel].
+extension ParticipateActivityNetModelPatterns on ParticipateActivityNetModel {
   /// A variant of `map` that fallback to returning `orElse`.
   ///
   /// It is equivalent to doing:
@@ -94,12 +96,12 @@ extension ParticipateActivityRespPatterns on ParticipateActivityResp {
 
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
-    TResult Function(_ParticipateActivityResp value)? $default, {
+    TResult Function(_ParticipateActivityNetModel value)? $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
-      case _ParticipateActivityResp() when $default != null:
+      case _ParticipateActivityNetModel() when $default != null:
         return $default(_that);
       case _:
         return orElse();
@@ -121,11 +123,11 @@ extension ParticipateActivityRespPatterns on ParticipateActivityResp {
 
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
-    TResult Function(_ParticipateActivityResp value) $default,
+    TResult Function(_ParticipateActivityNetModel value) $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _ParticipateActivityResp():
+      case _ParticipateActivityNetModel():
         return $default(_that);
       case _:
         throw StateError('Unexpected subclass');
@@ -146,11 +148,11 @@ extension ParticipateActivityRespPatterns on ParticipateActivityResp {
 
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_ParticipateActivityResp value)? $default,
+    TResult? Function(_ParticipateActivityNetModel value)? $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _ParticipateActivityResp() when $default != null:
+      case _ParticipateActivityNetModel() when $default != null:
         return $default(_that);
       case _:
         return null;
@@ -171,12 +173,12 @@ extension ParticipateActivityRespPatterns on ParticipateActivityResp {
 
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String message)? $default, {
+    TResult Function(String? message)? $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
-      case _ParticipateActivityResp() when $default != null:
+      case _ParticipateActivityNetModel() when $default != null:
         return $default(_that.message);
       case _:
         return orElse();
@@ -198,11 +200,11 @@ extension ParticipateActivityRespPatterns on ParticipateActivityResp {
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String message) $default,
+    TResult Function(String? message) $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _ParticipateActivityResp():
+      case _ParticipateActivityNetModel():
         return $default(_that.message);
       case _:
         throw StateError('Unexpected subclass');
@@ -223,11 +225,11 @@ extension ParticipateActivityRespPatterns on ParticipateActivityResp {
 
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(String message)? $default,
+    TResult? Function(String? message)? $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _ParticipateActivityResp() when $default != null:
+      case _ParticipateActivityNetModel() when $default != null:
         return $default(_that.message);
       case _:
         return null;
@@ -237,26 +239,26 @@ extension ParticipateActivityRespPatterns on ParticipateActivityResp {
 
 /// @nodoc
 @JsonSerializable()
-class _ParticipateActivityResp implements ParticipateActivityResp {
-  const _ParticipateActivityResp({required this.message});
-  factory _ParticipateActivityResp.fromJson(Map<String, dynamic> json) =>
-      _$ParticipateActivityRespFromJson(json);
+class _ParticipateActivityNetModel implements ParticipateActivityNetModel {
+  const _ParticipateActivityNetModel({this.message});
+  factory _ParticipateActivityNetModel.fromJson(Map<String, dynamic> json) =>
+      _$ParticipateActivityNetModelFromJson(json);
 
   @override
-  final String message;
+  final String? message;
 
-  /// Create a copy of ParticipateActivityResp
+  /// Create a copy of ParticipateActivityNetModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  _$ParticipateActivityRespCopyWith<_ParticipateActivityResp> get copyWith =>
-      __$ParticipateActivityRespCopyWithImpl<_ParticipateActivityResp>(
-          this, _$identity);
+  _$ParticipateActivityNetModelCopyWith<_ParticipateActivityNetModel>
+      get copyWith => __$ParticipateActivityNetModelCopyWithImpl<
+          _ParticipateActivityNetModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$ParticipateActivityRespToJson(
+    return _$ParticipateActivityNetModelToJson(
       this,
     );
   }
@@ -265,7 +267,7 @@ class _ParticipateActivityResp implements ParticipateActivityResp {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ParticipateActivityResp &&
+            other is _ParticipateActivityNetModel &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -275,41 +277,42 @@ class _ParticipateActivityResp implements ParticipateActivityResp {
 
   @override
   String toString() {
-    return 'ParticipateActivityResp(message: $message)';
+    return 'ParticipateActivityNetModel(message: $message)';
   }
 }
 
 /// @nodoc
-abstract mixin class _$ParticipateActivityRespCopyWith<$Res>
-    implements $ParticipateActivityRespCopyWith<$Res> {
-  factory _$ParticipateActivityRespCopyWith(_ParticipateActivityResp value,
-          $Res Function(_ParticipateActivityResp) _then) =
-      __$ParticipateActivityRespCopyWithImpl;
+abstract mixin class _$ParticipateActivityNetModelCopyWith<$Res>
+    implements $ParticipateActivityNetModelCopyWith<$Res> {
+  factory _$ParticipateActivityNetModelCopyWith(
+          _ParticipateActivityNetModel value,
+          $Res Function(_ParticipateActivityNetModel) _then) =
+      __$ParticipateActivityNetModelCopyWithImpl;
   @override
   @useResult
-  $Res call({String message});
+  $Res call({String? message});
 }
 
 /// @nodoc
-class __$ParticipateActivityRespCopyWithImpl<$Res>
-    implements _$ParticipateActivityRespCopyWith<$Res> {
-  __$ParticipateActivityRespCopyWithImpl(this._self, this._then);
+class __$ParticipateActivityNetModelCopyWithImpl<$Res>
+    implements _$ParticipateActivityNetModelCopyWith<$Res> {
+  __$ParticipateActivityNetModelCopyWithImpl(this._self, this._then);
 
-  final _ParticipateActivityResp _self;
-  final $Res Function(_ParticipateActivityResp) _then;
+  final _ParticipateActivityNetModel _self;
+  final $Res Function(_ParticipateActivityNetModel) _then;
 
-  /// Create a copy of ParticipateActivityResp
+  /// Create a copy of ParticipateActivityNetModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $Res call({
-    Object? message = null,
+    Object? message = freezed,
   }) {
-    return _then(_ParticipateActivityResp(
-      message: null == message
+    return _then(_ParticipateActivityNetModel(
+      message: freezed == message
           ? _self.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
