@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_api/flutter_api.dart';
-import 'package:flutter_api/src/activity/models/activity_net_model.dart';
-import 'package:flutter_api/src/activity/models/participate_activity_net_model.dart';
+import 'package:flutter_api/src/activity/responses/activity_net_model.dart';
+import 'package:flutter_api/src/activity/responses/participate_activity_net_model.dart';
 import 'package:flutter_api/src/activity/requests/participate_activity_query_model.dart';
 import 'package:retrofit/retrofit.dart';
 

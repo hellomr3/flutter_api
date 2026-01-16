@@ -41,7 +41,7 @@
   - 类命名：`{功能}QueryModel`
   - 一个文件只包含一个类
   - 字段按需使用 `required`
-- **响应实体类**：放在对应业务模块的 `models/` 目录下
+- **响应实体类**：放在对应业务模块的 `responses/` 目录下
   - 文件命名：`{功能}_net_model.dart`
   - 类命名：`{功能}NetModel`
   - **所有字段必须为可空**（不使用 `required`）
@@ -50,15 +50,15 @@
 ```
 lib/src/
 ├── account/
-│   ├── models/          # 响应模型
-│   │   ├── user_model.dart
-│   │   └── login_model.dart
+│   ├── responses/       # 响应模型
+│   │   ├── user_net_model.dart
+│   │   └── login_net_model.dart
 │   ├── requests/        # 请求参数
-│   │   ├── login_query_params.dart
-│   │   └── register_query_params.dart
+│   │   ├── login_query_model.dart
+│   │   └── register_query_model.dart
 │   └── account_api.dart
 └── pay/
-    ├── models/
+    ├── responses/
     └── requests/
 ```
 
