@@ -1,3 +1,4 @@
+import 'package:flutter_api/src/activity/models/button_net_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'activity_net_model.freezed.dart';
@@ -12,12 +13,7 @@ abstract class ActivityNetModel with _$ActivityNetModel {
     String? createTime,
     String? award,
     int? awardDays,
-    String? submitTips,
-    String? actionType,
-    String? actionValue,
-    String? interactionType,
-    String? copyContent,
-    String? buttonText,
+    List<ButtonNetModel>? buttonConfig,
     int? userParticipationLimit,
     int? totalStockLimit,
     int? currentStock,

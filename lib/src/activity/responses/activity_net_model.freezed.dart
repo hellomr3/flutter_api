@@ -20,12 +20,7 @@ mixin _$ActivityNetModel {
   String? get createTime;
   String? get award;
   int? get awardDays;
-  String? get submitTips;
-  String? get actionType;
-  String? get actionValue;
-  String? get interactionType;
-  String? get copyContent;
-  String? get buttonText;
+  List<ButtonNetModel>? get buttonConfig;
   int? get userParticipationLimit;
   int? get totalStockLimit;
   int? get currentStock;
@@ -56,18 +51,8 @@ mixin _$ActivityNetModel {
             (identical(other.award, award) || other.award == award) &&
             (identical(other.awardDays, awardDays) ||
                 other.awardDays == awardDays) &&
-            (identical(other.submitTips, submitTips) ||
-                other.submitTips == submitTips) &&
-            (identical(other.actionType, actionType) ||
-                other.actionType == actionType) &&
-            (identical(other.actionValue, actionValue) ||
-                other.actionValue == actionValue) &&
-            (identical(other.interactionType, interactionType) ||
-                other.interactionType == interactionType) &&
-            (identical(other.copyContent, copyContent) ||
-                other.copyContent == copyContent) &&
-            (identical(other.buttonText, buttonText) ||
-                other.buttonText == buttonText) &&
+            const DeepCollectionEquality()
+                .equals(other.buttonConfig, buttonConfig) &&
             (identical(other.userParticipationLimit, userParticipationLimit) ||
                 other.userParticipationLimit == userParticipationLimit) &&
             (identical(other.totalStockLimit, totalStockLimit) ||
@@ -90,12 +75,7 @@ mixin _$ActivityNetModel {
       createTime,
       award,
       awardDays,
-      submitTips,
-      actionType,
-      actionValue,
-      interactionType,
-      copyContent,
-      buttonText,
+      const DeepCollectionEquality().hash(buttonConfig),
       userParticipationLimit,
       totalStockLimit,
       currentStock,
@@ -104,7 +84,7 @@ mixin _$ActivityNetModel {
 
   @override
   String toString() {
-    return 'ActivityNetModel(id: $id, title: $title, content: $content, createTime: $createTime, award: $award, awardDays: $awardDays, submitTips: $submitTips, actionType: $actionType, actionValue: $actionValue, interactionType: $interactionType, copyContent: $copyContent, buttonText: $buttonText, userParticipationLimit: $userParticipationLimit, totalStockLimit: $totalStockLimit, currentStock: $currentStock, canParticipate: $canParticipate, remainingStock: $remainingStock)';
+    return 'ActivityNetModel(id: $id, title: $title, content: $content, createTime: $createTime, award: $award, awardDays: $awardDays, buttonConfig: $buttonConfig, userParticipationLimit: $userParticipationLimit, totalStockLimit: $totalStockLimit, currentStock: $currentStock, canParticipate: $canParticipate, remainingStock: $remainingStock)';
   }
 }
 
@@ -121,12 +101,7 @@ abstract mixin class $ActivityNetModelCopyWith<$Res> {
       String? createTime,
       String? award,
       int? awardDays,
-      String? submitTips,
-      String? actionType,
-      String? actionValue,
-      String? interactionType,
-      String? copyContent,
-      String? buttonText,
+      List<ButtonNetModel>? buttonConfig,
       int? userParticipationLimit,
       int? totalStockLimit,
       int? currentStock,
@@ -153,12 +128,7 @@ class _$ActivityNetModelCopyWithImpl<$Res>
     Object? createTime = freezed,
     Object? award = freezed,
     Object? awardDays = freezed,
-    Object? submitTips = freezed,
-    Object? actionType = freezed,
-    Object? actionValue = freezed,
-    Object? interactionType = freezed,
-    Object? copyContent = freezed,
-    Object? buttonText = freezed,
+    Object? buttonConfig = freezed,
     Object? userParticipationLimit = freezed,
     Object? totalStockLimit = freezed,
     Object? currentStock = freezed,
@@ -190,30 +160,10 @@ class _$ActivityNetModelCopyWithImpl<$Res>
           ? _self.awardDays
           : awardDays // ignore: cast_nullable_to_non_nullable
               as int?,
-      submitTips: freezed == submitTips
-          ? _self.submitTips
-          : submitTips // ignore: cast_nullable_to_non_nullable
-              as String?,
-      actionType: freezed == actionType
-          ? _self.actionType
-          : actionType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      actionValue: freezed == actionValue
-          ? _self.actionValue
-          : actionValue // ignore: cast_nullable_to_non_nullable
-              as String?,
-      interactionType: freezed == interactionType
-          ? _self.interactionType
-          : interactionType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      copyContent: freezed == copyContent
-          ? _self.copyContent
-          : copyContent // ignore: cast_nullable_to_non_nullable
-              as String?,
-      buttonText: freezed == buttonText
-          ? _self.buttonText
-          : buttonText // ignore: cast_nullable_to_non_nullable
-              as String?,
+      buttonConfig: freezed == buttonConfig
+          ? _self.buttonConfig
+          : buttonConfig // ignore: cast_nullable_to_non_nullable
+              as List<ButtonNetModel>?,
       userParticipationLimit: freezed == userParticipationLimit
           ? _self.userParticipationLimit
           : userParticipationLimit // ignore: cast_nullable_to_non_nullable
@@ -338,12 +288,7 @@ extension ActivityNetModelPatterns on ActivityNetModel {
             String? createTime,
             String? award,
             int? awardDays,
-            String? submitTips,
-            String? actionType,
-            String? actionValue,
-            String? interactionType,
-            String? copyContent,
-            String? buttonText,
+            List<ButtonNetModel>? buttonConfig,
             int? userParticipationLimit,
             int? totalStockLimit,
             int? currentStock,
@@ -362,12 +307,7 @@ extension ActivityNetModelPatterns on ActivityNetModel {
             _that.createTime,
             _that.award,
             _that.awardDays,
-            _that.submitTips,
-            _that.actionType,
-            _that.actionValue,
-            _that.interactionType,
-            _that.copyContent,
-            _that.buttonText,
+            _that.buttonConfig,
             _that.userParticipationLimit,
             _that.totalStockLimit,
             _that.currentStock,
@@ -400,12 +340,7 @@ extension ActivityNetModelPatterns on ActivityNetModel {
             String? createTime,
             String? award,
             int? awardDays,
-            String? submitTips,
-            String? actionType,
-            String? actionValue,
-            String? interactionType,
-            String? copyContent,
-            String? buttonText,
+            List<ButtonNetModel>? buttonConfig,
             int? userParticipationLimit,
             int? totalStockLimit,
             int? currentStock,
@@ -423,12 +358,7 @@ extension ActivityNetModelPatterns on ActivityNetModel {
             _that.createTime,
             _that.award,
             _that.awardDays,
-            _that.submitTips,
-            _that.actionType,
-            _that.actionValue,
-            _that.interactionType,
-            _that.copyContent,
-            _that.buttonText,
+            _that.buttonConfig,
             _that.userParticipationLimit,
             _that.totalStockLimit,
             _that.currentStock,
@@ -460,12 +390,7 @@ extension ActivityNetModelPatterns on ActivityNetModel {
             String? createTime,
             String? award,
             int? awardDays,
-            String? submitTips,
-            String? actionType,
-            String? actionValue,
-            String? interactionType,
-            String? copyContent,
-            String? buttonText,
+            List<ButtonNetModel>? buttonConfig,
             int? userParticipationLimit,
             int? totalStockLimit,
             int? currentStock,
@@ -483,12 +408,7 @@ extension ActivityNetModelPatterns on ActivityNetModel {
             _that.createTime,
             _that.award,
             _that.awardDays,
-            _that.submitTips,
-            _that.actionType,
-            _that.actionValue,
-            _that.interactionType,
-            _that.copyContent,
-            _that.buttonText,
+            _that.buttonConfig,
             _that.userParticipationLimit,
             _that.totalStockLimit,
             _that.currentStock,
@@ -510,17 +430,13 @@ class _ActivityNetModel implements ActivityNetModel {
       this.createTime,
       this.award,
       this.awardDays,
-      this.submitTips,
-      this.actionType,
-      this.actionValue,
-      this.interactionType,
-      this.copyContent,
-      this.buttonText,
+      final List<ButtonNetModel>? buttonConfig,
       this.userParticipationLimit,
       this.totalStockLimit,
       this.currentStock,
       this.canParticipate,
-      this.remainingStock});
+      this.remainingStock})
+      : _buttonConfig = buttonConfig;
   factory _ActivityNetModel.fromJson(Map<String, dynamic> json) =>
       _$ActivityNetModelFromJson(json);
 
@@ -536,18 +452,16 @@ class _ActivityNetModel implements ActivityNetModel {
   final String? award;
   @override
   final int? awardDays;
+  final List<ButtonNetModel>? _buttonConfig;
   @override
-  final String? submitTips;
-  @override
-  final String? actionType;
-  @override
-  final String? actionValue;
-  @override
-  final String? interactionType;
-  @override
-  final String? copyContent;
-  @override
-  final String? buttonText;
+  List<ButtonNetModel>? get buttonConfig {
+    final value = _buttonConfig;
+    if (value == null) return null;
+    if (_buttonConfig is EqualUnmodifiableListView) return _buttonConfig;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final int? userParticipationLimit;
   @override
@@ -587,18 +501,8 @@ class _ActivityNetModel implements ActivityNetModel {
             (identical(other.award, award) || other.award == award) &&
             (identical(other.awardDays, awardDays) ||
                 other.awardDays == awardDays) &&
-            (identical(other.submitTips, submitTips) ||
-                other.submitTips == submitTips) &&
-            (identical(other.actionType, actionType) ||
-                other.actionType == actionType) &&
-            (identical(other.actionValue, actionValue) ||
-                other.actionValue == actionValue) &&
-            (identical(other.interactionType, interactionType) ||
-                other.interactionType == interactionType) &&
-            (identical(other.copyContent, copyContent) ||
-                other.copyContent == copyContent) &&
-            (identical(other.buttonText, buttonText) ||
-                other.buttonText == buttonText) &&
+            const DeepCollectionEquality()
+                .equals(other._buttonConfig, _buttonConfig) &&
             (identical(other.userParticipationLimit, userParticipationLimit) ||
                 other.userParticipationLimit == userParticipationLimit) &&
             (identical(other.totalStockLimit, totalStockLimit) ||
@@ -621,12 +525,7 @@ class _ActivityNetModel implements ActivityNetModel {
       createTime,
       award,
       awardDays,
-      submitTips,
-      actionType,
-      actionValue,
-      interactionType,
-      copyContent,
-      buttonText,
+      const DeepCollectionEquality().hash(_buttonConfig),
       userParticipationLimit,
       totalStockLimit,
       currentStock,
@@ -635,7 +534,7 @@ class _ActivityNetModel implements ActivityNetModel {
 
   @override
   String toString() {
-    return 'ActivityNetModel(id: $id, title: $title, content: $content, createTime: $createTime, award: $award, awardDays: $awardDays, submitTips: $submitTips, actionType: $actionType, actionValue: $actionValue, interactionType: $interactionType, copyContent: $copyContent, buttonText: $buttonText, userParticipationLimit: $userParticipationLimit, totalStockLimit: $totalStockLimit, currentStock: $currentStock, canParticipate: $canParticipate, remainingStock: $remainingStock)';
+    return 'ActivityNetModel(id: $id, title: $title, content: $content, createTime: $createTime, award: $award, awardDays: $awardDays, buttonConfig: $buttonConfig, userParticipationLimit: $userParticipationLimit, totalStockLimit: $totalStockLimit, currentStock: $currentStock, canParticipate: $canParticipate, remainingStock: $remainingStock)';
   }
 }
 
@@ -654,12 +553,7 @@ abstract mixin class _$ActivityNetModelCopyWith<$Res>
       String? createTime,
       String? award,
       int? awardDays,
-      String? submitTips,
-      String? actionType,
-      String? actionValue,
-      String? interactionType,
-      String? copyContent,
-      String? buttonText,
+      List<ButtonNetModel>? buttonConfig,
       int? userParticipationLimit,
       int? totalStockLimit,
       int? currentStock,
@@ -686,12 +580,7 @@ class __$ActivityNetModelCopyWithImpl<$Res>
     Object? createTime = freezed,
     Object? award = freezed,
     Object? awardDays = freezed,
-    Object? submitTips = freezed,
-    Object? actionType = freezed,
-    Object? actionValue = freezed,
-    Object? interactionType = freezed,
-    Object? copyContent = freezed,
-    Object? buttonText = freezed,
+    Object? buttonConfig = freezed,
     Object? userParticipationLimit = freezed,
     Object? totalStockLimit = freezed,
     Object? currentStock = freezed,
@@ -723,30 +612,10 @@ class __$ActivityNetModelCopyWithImpl<$Res>
           ? _self.awardDays
           : awardDays // ignore: cast_nullable_to_non_nullable
               as int?,
-      submitTips: freezed == submitTips
-          ? _self.submitTips
-          : submitTips // ignore: cast_nullable_to_non_nullable
-              as String?,
-      actionType: freezed == actionType
-          ? _self.actionType
-          : actionType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      actionValue: freezed == actionValue
-          ? _self.actionValue
-          : actionValue // ignore: cast_nullable_to_non_nullable
-              as String?,
-      interactionType: freezed == interactionType
-          ? _self.interactionType
-          : interactionType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      copyContent: freezed == copyContent
-          ? _self.copyContent
-          : copyContent // ignore: cast_nullable_to_non_nullable
-              as String?,
-      buttonText: freezed == buttonText
-          ? _self.buttonText
-          : buttonText // ignore: cast_nullable_to_non_nullable
-              as String?,
+      buttonConfig: freezed == buttonConfig
+          ? _self._buttonConfig
+          : buttonConfig // ignore: cast_nullable_to_non_nullable
+              as List<ButtonNetModel>?,
       userParticipationLimit: freezed == userParticipationLimit
           ? _self.userParticipationLimit
           : userParticipationLimit // ignore: cast_nullable_to_non_nullable

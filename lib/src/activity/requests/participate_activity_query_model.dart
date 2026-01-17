@@ -7,8 +7,10 @@ part 'participate_activity_query_model.g.dart';
 abstract class ParticipateActivityQueryModel with _$ParticipateActivityQueryModel {
   const factory ParticipateActivityQueryModel({
     required String activityId,
+    required String buttonId,
     String? submitContent,
     String? imageUrl,
+    String? payloadContent,
   }) = _ParticipateActivityQueryModel;
 
   factory ParticipateActivityQueryModel.fromJson(Map<String, dynamic> json) =>

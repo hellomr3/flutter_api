@@ -15,8 +15,10 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ParticipateActivityQueryModel {
   String get activityId;
+  String get buttonId;
   String? get submitContent;
   String? get imageUrl;
+  String? get payloadContent;
 
   /// Create a copy of ParticipateActivityQueryModel
   /// with the given fields replaced by the non-null parameter values.
@@ -37,20 +39,24 @@ mixin _$ParticipateActivityQueryModel {
             other is ParticipateActivityQueryModel &&
             (identical(other.activityId, activityId) ||
                 other.activityId == activityId) &&
+            (identical(other.buttonId, buttonId) ||
+                other.buttonId == buttonId) &&
             (identical(other.submitContent, submitContent) ||
                 other.submitContent == submitContent) &&
             (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl));
+                other.imageUrl == imageUrl) &&
+            (identical(other.payloadContent, payloadContent) ||
+                other.payloadContent == payloadContent));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, activityId, submitContent, imageUrl);
+  int get hashCode => Object.hash(runtimeType, activityId, buttonId,
+      submitContent, imageUrl, payloadContent);
 
   @override
   String toString() {
-    return 'ParticipateActivityQueryModel(activityId: $activityId, submitContent: $submitContent, imageUrl: $imageUrl)';
+    return 'ParticipateActivityQueryModel(activityId: $activityId, buttonId: $buttonId, submitContent: $submitContent, imageUrl: $imageUrl, payloadContent: $payloadContent)';
   }
 }
 
@@ -61,7 +67,12 @@ abstract mixin class $ParticipateActivityQueryModelCopyWith<$Res> {
           $Res Function(ParticipateActivityQueryModel) _then) =
       _$ParticipateActivityQueryModelCopyWithImpl;
   @useResult
-  $Res call({String activityId, String? submitContent, String? imageUrl});
+  $Res call(
+      {String activityId,
+      String buttonId,
+      String? submitContent,
+      String? imageUrl,
+      String? payloadContent});
 }
 
 /// @nodoc
@@ -78,13 +89,19 @@ class _$ParticipateActivityQueryModelCopyWithImpl<$Res>
   @override
   $Res call({
     Object? activityId = null,
+    Object? buttonId = null,
     Object? submitContent = freezed,
     Object? imageUrl = freezed,
+    Object? payloadContent = freezed,
   }) {
     return _then(_self.copyWith(
       activityId: null == activityId
           ? _self.activityId
           : activityId // ignore: cast_nullable_to_non_nullable
+              as String,
+      buttonId: null == buttonId
+          ? _self.buttonId
+          : buttonId // ignore: cast_nullable_to_non_nullable
               as String,
       submitContent: freezed == submitContent
           ? _self.submitContent
@@ -93,6 +110,10 @@ class _$ParticipateActivityQueryModelCopyWithImpl<$Res>
       imageUrl: freezed == imageUrl
           ? _self.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
+      payloadContent: freezed == payloadContent
+          ? _self.payloadContent
+          : payloadContent // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -192,15 +213,16 @@ extension ParticipateActivityQueryModelPatterns
 
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            String activityId, String? submitContent, String? imageUrl)?
+    TResult Function(String activityId, String buttonId, String? submitContent,
+            String? imageUrl, String? payloadContent)?
         $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
       case _ParticipateActivityQueryModel() when $default != null:
-        return $default(_that.activityId, _that.submitContent, _that.imageUrl);
+        return $default(_that.activityId, _that.buttonId, _that.submitContent,
+            _that.imageUrl, _that.payloadContent);
       case _:
         return orElse();
     }
@@ -221,13 +243,15 @@ extension ParticipateActivityQueryModelPatterns
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String activityId, String? submitContent, String? imageUrl)
+    TResult Function(String activityId, String buttonId, String? submitContent,
+            String? imageUrl, String? payloadContent)
         $default,
   ) {
     final _that = this;
     switch (_that) {
       case _ParticipateActivityQueryModel():
-        return $default(_that.activityId, _that.submitContent, _that.imageUrl);
+        return $default(_that.activityId, _that.buttonId, _that.submitContent,
+            _that.imageUrl, _that.payloadContent);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -247,14 +271,15 @@ extension ParticipateActivityQueryModelPatterns
 
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(
-            String activityId, String? submitContent, String? imageUrl)?
+    TResult? Function(String activityId, String buttonId, String? submitContent,
+            String? imageUrl, String? payloadContent)?
         $default,
   ) {
     final _that = this;
     switch (_that) {
       case _ParticipateActivityQueryModel() when $default != null:
-        return $default(_that.activityId, _that.submitContent, _that.imageUrl);
+        return $default(_that.activityId, _that.buttonId, _that.submitContent,
+            _that.imageUrl, _that.payloadContent);
       case _:
         return null;
     }
@@ -265,16 +290,24 @@ extension ParticipateActivityQueryModelPatterns
 @JsonSerializable()
 class _ParticipateActivityQueryModel implements ParticipateActivityQueryModel {
   const _ParticipateActivityQueryModel(
-      {required this.activityId, this.submitContent, this.imageUrl});
+      {required this.activityId,
+      required this.buttonId,
+      this.submitContent,
+      this.imageUrl,
+      this.payloadContent});
   factory _ParticipateActivityQueryModel.fromJson(Map<String, dynamic> json) =>
       _$ParticipateActivityQueryModelFromJson(json);
 
   @override
   final String activityId;
   @override
+  final String buttonId;
+  @override
   final String? submitContent;
   @override
   final String? imageUrl;
+  @override
+  final String? payloadContent;
 
   /// Create a copy of ParticipateActivityQueryModel
   /// with the given fields replaced by the non-null parameter values.
@@ -299,20 +332,24 @@ class _ParticipateActivityQueryModel implements ParticipateActivityQueryModel {
             other is _ParticipateActivityQueryModel &&
             (identical(other.activityId, activityId) ||
                 other.activityId == activityId) &&
+            (identical(other.buttonId, buttonId) ||
+                other.buttonId == buttonId) &&
             (identical(other.submitContent, submitContent) ||
                 other.submitContent == submitContent) &&
             (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl));
+                other.imageUrl == imageUrl) &&
+            (identical(other.payloadContent, payloadContent) ||
+                other.payloadContent == payloadContent));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, activityId, submitContent, imageUrl);
+  int get hashCode => Object.hash(runtimeType, activityId, buttonId,
+      submitContent, imageUrl, payloadContent);
 
   @override
   String toString() {
-    return 'ParticipateActivityQueryModel(activityId: $activityId, submitContent: $submitContent, imageUrl: $imageUrl)';
+    return 'ParticipateActivityQueryModel(activityId: $activityId, buttonId: $buttonId, submitContent: $submitContent, imageUrl: $imageUrl, payloadContent: $payloadContent)';
   }
 }
 
@@ -325,7 +362,12 @@ abstract mixin class _$ParticipateActivityQueryModelCopyWith<$Res>
       __$ParticipateActivityQueryModelCopyWithImpl;
   @override
   @useResult
-  $Res call({String activityId, String? submitContent, String? imageUrl});
+  $Res call(
+      {String activityId,
+      String buttonId,
+      String? submitContent,
+      String? imageUrl,
+      String? payloadContent});
 }
 
 /// @nodoc
@@ -342,13 +384,19 @@ class __$ParticipateActivityQueryModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   $Res call({
     Object? activityId = null,
+    Object? buttonId = null,
     Object? submitContent = freezed,
     Object? imageUrl = freezed,
+    Object? payloadContent = freezed,
   }) {
     return _then(_ParticipateActivityQueryModel(
       activityId: null == activityId
           ? _self.activityId
           : activityId // ignore: cast_nullable_to_non_nullable
+              as String,
+      buttonId: null == buttonId
+          ? _self.buttonId
+          : buttonId // ignore: cast_nullable_to_non_nullable
               as String,
       submitContent: freezed == submitContent
           ? _self.submitContent
@@ -357,6 +405,10 @@ class __$ParticipateActivityQueryModelCopyWithImpl<$Res>
       imageUrl: freezed == imageUrl
           ? _self.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
+      payloadContent: freezed == payloadContent
+          ? _self.payloadContent
+          : payloadContent // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
