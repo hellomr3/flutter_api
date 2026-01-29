@@ -869,9 +869,10 @@ extension VipInfoNetModelPatterns on VipInfoNetModel {
 
 /// @nodoc
 @JsonSerializable()
-class _VipInfoNetModel implements VipInfoNetModel {
+class _VipInfoNetModel extends VipInfoNetModel {
   const _VipInfoNetModel(
-      {this.lifeTime, this.paidVip, this.freeVip, this.expiredAt});
+      {this.lifeTime, this.paidVip, this.freeVip, this.expiredAt})
+      : super._();
   factory _VipInfoNetModel.fromJson(Map<String, dynamic> json) =>
       _$VipInfoNetModelFromJson(json);
 

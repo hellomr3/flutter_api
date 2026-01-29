@@ -24,13 +24,6 @@ abstract class UserModel with _$UserModel {
   factory UserModel.fromJson(Map<String, dynamic> json) =>
       _$UserModelFromJson(json);
 
-  /// 是否为VIP用户（计算属性，从vipInfo计算得出）
-  bool get isVip {
-    return vipInfo?.lifeTime == true ||
-        vipInfo?.paidVip == true ||
-        vipInfo?.freeVip == true;
-  }
-
   bool get lifeTime => vipInfo?.lifeTime ?? false;
 
   bool get paidVip => vipInfo?.paidVip ?? false;
@@ -50,6 +43,13 @@ abstract class UserModel with _$UserModel {
 
 @freezed
 abstract class VipInfoNetModel with _$VipInfoNetModel {
+  const VipInfoNetModel._();
+
+  /// 是否为VIP用户（计算属性，从vipInfo计算得出）
+  bool get isVip {
+    return lifeTime == true || paidVip == true || freeVip == true;
+  }
+
   const factory VipInfoNetModel({
     bool? lifeTime,
     bool? paidVip,
