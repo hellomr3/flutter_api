@@ -122,7 +122,7 @@ class _AccountApi implements AccountApi {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            '/user/v1/updateNickname',
+            '/user/v1/updateNickName',
             queryParameters: queryParameters,
             data: _data,
           )
