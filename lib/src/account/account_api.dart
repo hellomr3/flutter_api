@@ -1,13 +1,13 @@
 import 'package:dio/dio.dart' hide Header;
 import 'package:flutter_api/src/account/models/login_model.dart';
 import 'package:flutter_api/src/account/models/user_model.dart';
+import 'package:flutter_api/src/account/requests/edit_nickname_query_params.dart';
+import 'package:flutter_api/src/account/requests/edit_password_query_params.dart';
+import 'package:flutter_api/src/account/requests/edit_username_query_params.dart';
 import 'package:flutter_api/src/account/requests/email_login_query_params.dart';
 import 'package:flutter_api/src/account/requests/hw_login_query_params.dart';
 import 'package:flutter_api/src/account/requests/login_query_params.dart';
 import 'package:flutter_api/src/account/requests/register_query_params.dart';
-import 'package:flutter_api/src/account/requests/edit_nickname_query_params.dart';
-import 'package:flutter_api/src/account/requests/edit_password_query_params.dart';
-import 'package:flutter_api/src/account/requests/edit_username_query_params.dart';
 import 'package:flutter_api/src/account/requests/send_email_code_query_params.dart';
 import 'package:flutter_api/src/core/api_response.dart';
 import 'package:retrofit/retrofit.dart';
@@ -34,7 +34,7 @@ abstract class AccountApi {
   );
 
   /// 修改昵称
-  @POST("/user/v1/updateNickname")
+  @POST("/user/v1/updateNickName")
   Future<ApiResponse<void>> editNickname(
     @Body() EditNicknameQueryParams request,
   );
