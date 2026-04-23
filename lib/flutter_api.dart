@@ -31,6 +31,7 @@ export 'src/pay/create_order/create_order_net_model.dart';
 export 'src/pay/create_order/create_order_query_params.dart';
 export 'src/pay/create_order/create_order_resp.dart';
 export 'src/pay/goods/goods_net_model.dart';
+export 'src/pay/google_verify_order/google_verify_order_query_params.dart';
 export 'src/pay/order_status/order_status_resp.dart';
 export 'src/pay/pay_api.dart';
 export 'src/pay/resume_apple_order/resume_apple_order_query_params.dart';

@@ -9,6 +9,7 @@ import 'package:flutter_api/src/pay/order_status/order_status_resp.dart';
 import 'package:flutter_api/src/pay/resume_apple_order/resume_apple_order_query_params.dart';
 import 'package:flutter_api/src/pay/verify_order_status/verify_order_status_query_params.dart';
 import 'package:flutter_api/src/pay/create_order/create_order_query_params.dart';
+import 'package:flutter_api/src/pay/google_verify_order/google_verify_order_query_params.dart';
 
 part 'pay_api.g.dart';
 
@@ -39,4 +40,13 @@ abstract class PayApi {
   @POST("/apple/pay/v2/userVerifyOrder")
   Future<ApiResponse<void>> resumeAppleOrder(
       @Body() ResumeAppleOrderQueryParams params);
+
+  /// 创建谷歌订单
+  @POST("/pay/v1/google/createOrder")
+  Future<ApiResponse<CreateOrderResp>> createGoogleOrder();
+
+  /// 校验谷歌订单支付结果
+  @POST("/pay/v1/google/verifyOrder")
+  Future<ApiResponse<void>> verifyGoogleOrder(
+      @Body() GoogleVerifyOrderQueryParams params);
 }
