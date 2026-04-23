@@ -1,14 +1,14 @@
 import 'package:dio/dio.dart' hide Header;
-import 'package:flutter_api/src/account/models/login_model.dart';
-import 'package:flutter_api/src/account/models/user_model.dart';
-import 'package:flutter_api/src/account/requests/edit_nickname_query_params.dart';
-import 'package:flutter_api/src/account/requests/edit_password_query_params.dart';
-import 'package:flutter_api/src/account/requests/edit_username_query_params.dart';
-import 'package:flutter_api/src/account/requests/email_login_query_params.dart';
-import 'package:flutter_api/src/account/requests/hw_login_query_params.dart';
-import 'package:flutter_api/src/account/requests/login_query_params.dart';
-import 'package:flutter_api/src/account/requests/register_query_params.dart';
-import 'package:flutter_api/src/account/requests/send_email_code_query_params.dart';
+import 'package:flutter_api/src/account/edit_nickname/edit_nickname_query_params.dart';
+import 'package:flutter_api/src/account/edit_password/edit_password_query_params.dart';
+import 'package:flutter_api/src/account/edit_username/edit_username_query_params.dart';
+import 'package:flutter_api/src/account/email_login/email_login_query_params.dart';
+import 'package:flutter_api/src/account/hw_login/hw_login_query_params.dart';
+import 'package:flutter_api/src/account/login/login_model.dart';
+import 'package:flutter_api/src/account/login/login_query_params.dart';
+import 'package:flutter_api/src/account/register/register_query_params.dart';
+import 'package:flutter_api/src/account/send_email_code/send_email_code_query_params.dart';
+import 'package:flutter_api/src/account/user/user_model.dart';
 import 'package:flutter_api/src/core/api_response.dart';
 import 'package:retrofit/retrofit.dart';
 

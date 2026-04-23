@@ -1,14 +1,14 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:flutter_api/src/core/api_response.dart';
-import 'package:flutter_api/src/pay/models/create_order_resp.dart';
-import 'package:flutter_api/src/pay/models/goods_net_model.dart';
-import 'package:flutter_api/src/pay/models/order_status_resp.dart';
-import 'package:flutter_api/src/pay/models/create_order_net_model.dart';
-import 'package:flutter_api/src/pay/requests/create_order_query_params.dart';
-import 'package:flutter_api/src/pay/requests/verify_order_status_query_params.dart';
-import 'package:flutter_api/src/pay/requests/create_apple_order_query_params.dart';
-import 'package:flutter_api/src/pay/requests/resume_apple_order_query_params.dart';
+import 'package:flutter_api/src/pay/create_apple_order/create_apple_order_query_params.dart';
+import 'package:flutter_api/src/pay/create_order/create_order_net_model.dart';
+import 'package:flutter_api/src/pay/create_order/create_order_resp.dart';
+import 'package:flutter_api/src/pay/goods/goods_net_model.dart';
+import 'package:flutter_api/src/pay/order_status/order_status_resp.dart';
+import 'package:flutter_api/src/pay/resume_apple_order/resume_apple_order_query_params.dart';
+import 'package:flutter_api/src/pay/verify_order_status/verify_order_status_query_params.dart';
+import 'package:flutter_api/src/pay/create_order/create_order_query_params.dart';
 
 part 'pay_api.g.dart';
 
