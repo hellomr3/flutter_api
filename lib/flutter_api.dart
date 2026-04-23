@@ -35,3 +35,7 @@ export 'src/pay/requests/create_apple_order_query_params.dart';
 export 'src/pay/requests/create_order_query_params.dart';
 export 'src/pay/requests/resume_apple_order_query_params.dart';
 export 'src/pay/requests/verify_order_status_query_params.dart';
+// Upload
+export 'src/upload/presigned_upload/presigned_upload_response.dart';
+export 'src/upload/upload_api.dart';
+export 'src/upload/user_cache_upload/user_cache_upload_request.dart';
