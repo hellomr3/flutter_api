@@ -33,6 +33,39 @@ lib/src/
 - **数据模型**：Freezed + json_annotation
 - **代码生成**：build_runner
 
+## API 接口列表
+
+### AccountApi
+
+| 接口 | 路径 | 说明 |
+|-----|------|------|
+| `register` | `/user/v2/register` | 账号密码注册 |
+| `login` | `/user/v1/login` | 账号密码登录 |
+| `hwLogin` | `/user/v1/hwLogin` | 华为一键登录 |
+| `emailLogin` | `/user/v1/emailLogin` | 邮箱验证码登录 |
+| `wechatLoginV2` | `/user/v2/wechatLogin` | 微信登录 |
+| `wechatRegister` | `/user/v1/wechatRegister` | 微信注册 |
+| `bindWechat` | `/user/v1/bindWechat` | 绑定微信 |
+| `unbindWechat` | `/user/v1/unbindWechat` | 解绑微信 |
+| `sendEmailCode` | `/verifyCode/v1/email` | 发送邮箱验证码 |
+| `editPassword` | `/user/v1/updatePassword` | 修改密码 |
+| `editNickname` | `/user/v1/updateNickName` | 修改昵称 |
+| `editUsername` | `/user/v1/updateUsername` | 修改用户名 |
+| `getUserInfo` | `/user/v2/me/info` | 获取用户信息 |
+| `deleteAccount` | `/user/v1/deleteAccount` | 注销账号 |
+
+### ActivityApi
+
+活动相关接口
+
+### PayApi
+
+支付相关接口
+
+### UploadApi
+
+上传相关接口
+
 ## 开发
 
 ```bash
