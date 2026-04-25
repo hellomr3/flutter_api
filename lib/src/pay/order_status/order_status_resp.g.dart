@@ -14,6 +14,6 @@ _OrderStatusResp _$OrderStatusRespFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$OrderStatusRespToJson(_OrderStatusResp instance) =>
     <String, dynamic>{
-      'orderId': instance.orderId,
-      'success': instance.success,
+      'orderId': ?instance.orderId,
+      'success': ?instance.success,
     };

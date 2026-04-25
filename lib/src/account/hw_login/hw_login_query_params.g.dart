@@ -13,7 +13,4 @@ _HwLoginQueryParams _$HwLoginQueryParamsFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$HwLoginQueryParamsToJson(_HwLoginQueryParams instance) =>
-    <String, dynamic>{
-      'authCode': instance.authCode,
-      'action': instance.action,
-    };
+    <String, dynamic>{'authCode': instance.authCode, 'action': instance.action};

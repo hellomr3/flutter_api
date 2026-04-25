@@ -6,6 +6,7 @@ import 'package:flutter_api/src/account/email_login/email_login_query_params.dar
 import 'package:flutter_api/src/account/hw_login/hw_login_query_params.dart';
 import 'package:flutter_api/src/account/login/login_model.dart';
 import 'package:flutter_api/src/account/login/login_query_params.dart';
+import 'package:flutter_api/src/account/wechat/wechat_operate_params.dart';
 import 'package:flutter_api/src/account/register/register_query_params.dart';
 import 'package:flutter_api/src/account/send_email_code/send_email_code_query_params.dart';
 import 'package:flutter_api/src/account/user/user_model.dart';
@@ -67,4 +68,22 @@ abstract class AccountApi {
   /// 注销账号
   @POST("/user/v1/deleteAccount")
   Future<ApiResponse<void>> deleteAccount();
+
+  /// 微信登录
+  @POST("/user/v2/wechatLogin")
+  Future<ApiResponse<WechatLoginResponse>> wechatLoginV2(
+      @Body() WechatOperateParams request);
+
+  /// 微信注册
+  @POST("/user/v1/wechatRegister")
+  Future<ApiResponse<WechatLoginResponse>> wechatRegister(
+      @Body() WechatOperateParams request);
+
+  /// 绑定微信
+  @POST("/user/v1/bindWechat")
+  Future<ApiResponse<void>> bindWechat(@Body() WechatOperateParams request);
+
+  /// 解绑微信
+  @POST("/user/v1/unbindWechat")
+  Future<ApiResponse<void>> unbindWechat(@Body() WechatOperateParams request);
 }

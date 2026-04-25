@@ -14,49 +14,47 @@ T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$CreateAppleOrderQueryParams {
-  String get productId;
 
-  /// Create a copy of CreateAppleOrderQueryParams
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @pragma('vm:prefer-inline')
-  $CreateAppleOrderQueryParamsCopyWith<CreateAppleOrderQueryParams>
-      get copyWith => _$CreateAppleOrderQueryParamsCopyWithImpl<
-              CreateAppleOrderQueryParams>(
-          this as CreateAppleOrderQueryParams, _$identity);
+ String get productId;
+/// Create a copy of CreateAppleOrderQueryParams
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$CreateAppleOrderQueryParamsCopyWith<CreateAppleOrderQueryParams> get copyWith => _$CreateAppleOrderQueryParamsCopyWithImpl<CreateAppleOrderQueryParams>(this as CreateAppleOrderQueryParams, _$identity);
 
   /// Serializes this CreateAppleOrderQueryParams to a JSON map.
   Map<String, dynamic> toJson();
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is CreateAppleOrderQueryParams &&
-            (identical(other.productId, productId) ||
-                other.productId == productId));
-  }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, productId);
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CreateAppleOrderQueryParams&&(identical(other.productId, productId) || other.productId == productId));
+}
 
-  @override
-  String toString() {
-    return 'CreateAppleOrderQueryParams(productId: $productId)';
-  }
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,productId);
+
+@override
+String toString() {
+  return 'CreateAppleOrderQueryParams(productId: $productId)';
+}
+
+
 }
 
 /// @nodoc
-abstract mixin class $CreateAppleOrderQueryParamsCopyWith<$Res> {
-  factory $CreateAppleOrderQueryParamsCopyWith(
-          CreateAppleOrderQueryParams value,
-          $Res Function(CreateAppleOrderQueryParams) _then) =
-      _$CreateAppleOrderQueryParamsCopyWithImpl;
-  @useResult
-  $Res call({String productId});
-}
+abstract mixin class $CreateAppleOrderQueryParamsCopyWith<$Res>  {
+  factory $CreateAppleOrderQueryParamsCopyWith(CreateAppleOrderQueryParams value, $Res Function(CreateAppleOrderQueryParams) _then) = _$CreateAppleOrderQueryParamsCopyWithImpl;
+@useResult
+$Res call({
+ String productId
+});
 
+
+
+
+}
 /// @nodoc
 class _$CreateAppleOrderQueryParamsCopyWithImpl<$Res>
     implements $CreateAppleOrderQueryParamsCopyWith<$Res> {
@@ -65,236 +63,197 @@ class _$CreateAppleOrderQueryParamsCopyWithImpl<$Res>
   final CreateAppleOrderQueryParams _self;
   final $Res Function(CreateAppleOrderQueryParams) _then;
 
-  /// Create a copy of CreateAppleOrderQueryParams
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? productId = null,
-  }) {
-    return _then(_self.copyWith(
-      productId: null == productId
-          ? _self.productId
-          : productId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
+/// Create a copy of CreateAppleOrderQueryParams
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? productId = null,}) {
+  return _then(_self.copyWith(
+productId: null == productId ? _self.productId : productId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
+
+}
+
 
 /// Adds pattern-matching-related methods to [CreateAppleOrderQueryParams].
 extension CreateAppleOrderQueryParamsPatterns on CreateAppleOrderQueryParams {
-  /// A variant of `map` that fallback to returning `orElse`.
-  ///
-  /// It is equivalent to doing:
-  /// ```dart
-  /// switch (sealedClass) {
-  ///   case final Subclass value:
-  ///     return ...;
-  ///   case _:
-  ///     return orElse();
-  /// }
-  /// ```
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
 
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_CreateAppleOrderQueryParams value)? $default, {
-    required TResult orElse(),
-  }) {
-    final _that = this;
-    switch (_that) {
-      case _CreateAppleOrderQueryParams() when $default != null:
-        return $default(_that);
-      case _:
-        return orElse();
-    }
-  }
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CreateAppleOrderQueryParams value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _CreateAppleOrderQueryParams() when $default != null:
+return $default(_that);case _:
+  return orElse();
 
-  /// A `switch`-like method, using callbacks.
-  ///
-  /// Callbacks receives the raw object, upcasted.
-  /// It is equivalent to doing:
-  /// ```dart
-  /// switch (sealedClass) {
-  ///   case final Subclass value:
-  ///     return ...;
-  ///   case final Subclass2 value:
-  ///     return ...;
-  /// }
-  /// ```
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
 
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_CreateAppleOrderQueryParams value) $default,
-  ) {
-    final _that = this;
-    switch (_that) {
-      case _CreateAppleOrderQueryParams():
-        return $default(_that);
-      case _:
-        throw StateError('Unexpected subclass');
-    }
-  }
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CreateAppleOrderQueryParams value)  $default,){
+final _that = this;
+switch (_that) {
+case _CreateAppleOrderQueryParams():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
 
-  /// A variant of `map` that fallback to returning `null`.
-  ///
-  /// It is equivalent to doing:
-  /// ```dart
-  /// switch (sealedClass) {
-  ///   case final Subclass value:
-  ///     return ...;
-  ///   case _:
-  ///     return null;
-  /// }
-  /// ```
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
 
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_CreateAppleOrderQueryParams value)? $default,
-  ) {
-    final _that = this;
-    switch (_that) {
-      case _CreateAppleOrderQueryParams() when $default != null:
-        return $default(_that);
-      case _:
-        return null;
-    }
-  }
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CreateAppleOrderQueryParams value)?  $default,){
+final _that = this;
+switch (_that) {
+case _CreateAppleOrderQueryParams() when $default != null:
+return $default(_that);case _:
+  return null;
 
-  /// A variant of `when` that fallback to an `orElse` callback.
-  ///
-  /// It is equivalent to doing:
-  /// ```dart
-  /// switch (sealedClass) {
-  ///   case Subclass(:final field):
-  ///     return ...;
-  ///   case _:
-  ///     return orElse();
-  /// }
-  /// ```
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
 
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String productId)? $default, {
-    required TResult orElse(),
-  }) {
-    final _that = this;
-    switch (_that) {
-      case _CreateAppleOrderQueryParams() when $default != null:
-        return $default(_that.productId);
-      case _:
-        return orElse();
-    }
-  }
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String productId)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _CreateAppleOrderQueryParams() when $default != null:
+return $default(_that.productId);case _:
+  return orElse();
 
-  /// A `switch`-like method, using callbacks.
-  ///
-  /// As opposed to `map`, this offers destructuring.
-  /// It is equivalent to doing:
-  /// ```dart
-  /// switch (sealedClass) {
-  ///   case Subclass(:final field):
-  ///     return ...;
-  ///   case Subclass2(:final field2):
-  ///     return ...;
-  /// }
-  /// ```
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
 
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(String productId) $default,
-  ) {
-    final _that = this;
-    switch (_that) {
-      case _CreateAppleOrderQueryParams():
-        return $default(_that.productId);
-      case _:
-        throw StateError('Unexpected subclass');
-    }
-  }
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String productId)  $default,) {final _that = this;
+switch (_that) {
+case _CreateAppleOrderQueryParams():
+return $default(_that.productId);case _:
+  throw StateError('Unexpected subclass');
 
-  /// A variant of `when` that fallback to returning `null`
-  ///
-  /// It is equivalent to doing:
-  /// ```dart
-  /// switch (sealedClass) {
-  ///   case Subclass(:final field):
-  ///     return ...;
-  ///   case _:
-  ///     return null;
-  /// }
-  /// ```
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
 
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(String productId)? $default,
-  ) {
-    final _that = this;
-    switch (_that) {
-      case _CreateAppleOrderQueryParams() when $default != null:
-        return $default(_that.productId);
-      case _:
-        return null;
-    }
-  }
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String productId)?  $default,) {final _that = this;
+switch (_that) {
+case _CreateAppleOrderQueryParams() when $default != null:
+return $default(_that.productId);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
+
 class _CreateAppleOrderQueryParams implements CreateAppleOrderQueryParams {
   const _CreateAppleOrderQueryParams({required this.productId});
-  factory _CreateAppleOrderQueryParams.fromJson(Map<String, dynamic> json) =>
-      _$CreateAppleOrderQueryParamsFromJson(json);
+  factory _CreateAppleOrderQueryParams.fromJson(Map<String, dynamic> json) => _$CreateAppleOrderQueryParamsFromJson(json);
 
-  @override
-  final String productId;
+@override final  String productId;
 
-  /// Create a copy of CreateAppleOrderQueryParams
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @pragma('vm:prefer-inline')
-  _$CreateAppleOrderQueryParamsCopyWith<_CreateAppleOrderQueryParams>
-      get copyWith => __$CreateAppleOrderQueryParamsCopyWithImpl<
-          _CreateAppleOrderQueryParams>(this, _$identity);
+/// Create a copy of CreateAppleOrderQueryParams
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$CreateAppleOrderQueryParamsCopyWith<_CreateAppleOrderQueryParams> get copyWith => __$CreateAppleOrderQueryParamsCopyWithImpl<_CreateAppleOrderQueryParams>(this, _$identity);
 
-  @override
-  Map<String, dynamic> toJson() {
-    return _$CreateAppleOrderQueryParamsToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$CreateAppleOrderQueryParamsToJson(this, );
+}
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _CreateAppleOrderQueryParams &&
-            (identical(other.productId, productId) ||
-                other.productId == productId));
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CreateAppleOrderQueryParams&&(identical(other.productId, productId) || other.productId == productId));
+}
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, productId);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,productId);
 
-  @override
-  String toString() {
-    return 'CreateAppleOrderQueryParams(productId: $productId)';
-  }
+@override
+String toString() {
+  return 'CreateAppleOrderQueryParams(productId: $productId)';
+}
+
+
 }
 
 /// @nodoc
-abstract mixin class _$CreateAppleOrderQueryParamsCopyWith<$Res>
-    implements $CreateAppleOrderQueryParamsCopyWith<$Res> {
-  factory _$CreateAppleOrderQueryParamsCopyWith(
-          _CreateAppleOrderQueryParams value,
-          $Res Function(_CreateAppleOrderQueryParams) _then) =
-      __$CreateAppleOrderQueryParamsCopyWithImpl;
-  @override
-  @useResult
-  $Res call({String productId});
-}
+abstract mixin class _$CreateAppleOrderQueryParamsCopyWith<$Res> implements $CreateAppleOrderQueryParamsCopyWith<$Res> {
+  factory _$CreateAppleOrderQueryParamsCopyWith(_CreateAppleOrderQueryParams value, $Res Function(_CreateAppleOrderQueryParams) _then) = __$CreateAppleOrderQueryParamsCopyWithImpl;
+@override @useResult
+$Res call({
+ String productId
+});
 
+
+
+
+}
 /// @nodoc
 class __$CreateAppleOrderQueryParamsCopyWithImpl<$Res>
     implements _$CreateAppleOrderQueryParamsCopyWith<$Res> {
@@ -303,20 +262,16 @@ class __$CreateAppleOrderQueryParamsCopyWithImpl<$Res>
   final _CreateAppleOrderQueryParams _self;
   final $Res Function(_CreateAppleOrderQueryParams) _then;
 
-  /// Create a copy of CreateAppleOrderQueryParams
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $Res call({
-    Object? productId = null,
-  }) {
-    return _then(_CreateAppleOrderQueryParams(
-      productId: null == productId
-          ? _self.productId
-          : productId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
+/// Create a copy of CreateAppleOrderQueryParams
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? productId = null,}) {
+  return _then(_CreateAppleOrderQueryParams(
+productId: null == productId ? _self.productId : productId // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+
 }
 
 // dart format on

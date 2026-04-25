@@ -7,13 +7,11 @@ part of 'user_cache_upload_request.dart';
 // **************************************************************************
 
 _UserCacheUploadRequest _$UserCacheUploadRequestFromJson(
-        Map<String, dynamic> json) =>
-    _UserCacheUploadRequest(
-      originalFilename: json['originalFilename'] as String,
-    );
+  Map<String, dynamic> json,
+) => _UserCacheUploadRequest(
+  originalFilename: json['originalFilename'] as String,
+);
 
 Map<String, dynamic> _$UserCacheUploadRequestToJson(
-        _UserCacheUploadRequest instance) =>
-    <String, dynamic>{
-      'originalFilename': instance.originalFilename,
-    };
+  _UserCacheUploadRequest instance,
+) => <String, dynamic>{'originalFilename': instance.originalFilename};

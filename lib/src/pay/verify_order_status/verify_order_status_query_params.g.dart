@@ -7,13 +7,9 @@ part of 'verify_order_status_query_params.dart';
 // **************************************************************************
 
 _VerifyOrderStatusQueryParams _$VerifyOrderStatusQueryParamsFromJson(
-        Map<String, dynamic> json) =>
-    _VerifyOrderStatusQueryParams(
-      orderId: json['orderId'] as String?,
-    );
+  Map<String, dynamic> json,
+) => _VerifyOrderStatusQueryParams(orderId: json['orderId'] as String?);
 
 Map<String, dynamic> _$VerifyOrderStatusQueryParamsToJson(
-        _VerifyOrderStatusQueryParams instance) =>
-    <String, dynamic>{
-      'orderId': instance.orderId,
-    };
+  _VerifyOrderStatusQueryParams instance,
+) => <String, dynamic>{'orderId': ?instance.orderId};

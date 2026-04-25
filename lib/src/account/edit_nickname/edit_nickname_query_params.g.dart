@@ -7,13 +7,9 @@ part of 'edit_nickname_query_params.dart';
 // **************************************************************************
 
 _EditNicknameQueryParams _$EditNicknameQueryParamsFromJson(
-        Map<String, dynamic> json) =>
-    _EditNicknameQueryParams(
-      nickname: json['nickname'] as String,
-    );
+  Map<String, dynamic> json,
+) => _EditNicknameQueryParams(nickname: json['nickname'] as String);
 
 Map<String, dynamic> _$EditNicknameQueryParamsToJson(
-        _EditNicknameQueryParams instance) =>
-    <String, dynamic>{
-      'nickname': instance.nickname,
-    };
+  _EditNicknameQueryParams instance,
+) => <String, dynamic>{'nickname': instance.nickname};

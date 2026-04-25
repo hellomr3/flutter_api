@@ -20,10 +20,10 @@ _ButtonNetModel _$ButtonNetModelFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$ButtonNetModelToJson(_ButtonNetModel instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'text': instance.text,
-      'type': _$ButtonTypeEnumMap[instance.type],
+      'text': ?instance.text,
+      'type': ?_$ButtonTypeEnumMap[instance.type],
       'actionType': _$ButtonActionTypeEnumMap[instance.actionType]!,
-      'payload': instance.payload,
+      'payload': ?instance.payload,
     };
 
 const _$ButtonTypeEnumMap = {

@@ -7,15 +7,12 @@ part of 'send_email_code_query_params.dart';
 // **************************************************************************
 
 _SendEmailCodeQueryParams _$SendEmailCodeQueryParamsFromJson(
-        Map<String, dynamic> json) =>
-    _SendEmailCodeQueryParams(
-      email: json['email'] as String,
-      type: json['type'] as String,
-    );
+  Map<String, dynamic> json,
+) => _SendEmailCodeQueryParams(
+  email: json['email'] as String,
+  type: json['type'] as String,
+);
 
 Map<String, dynamic> _$SendEmailCodeQueryParamsToJson(
-        _SendEmailCodeQueryParams instance) =>
-    <String, dynamic>{
-      'email': instance.email,
-      'type': instance.type,
-    };
+  _SendEmailCodeQueryParams instance,
+) => <String, dynamic>{'email': instance.email, 'type': instance.type};

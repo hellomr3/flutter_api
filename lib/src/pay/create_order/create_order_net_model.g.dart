@@ -14,9 +14,9 @@ _CreateOrderNetModel _$CreateOrderNetModelFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$CreateOrderNetModelToJson(
-        _CreateOrderNetModel instance) =>
-    <String, dynamic>{
-      'orderStr': instance.orderStr,
-      'orderId': instance.orderId,
-      'token': instance.token,
-    };
+  _CreateOrderNetModel instance,
+) => <String, dynamic>{
+  'orderStr': ?instance.orderStr,
+  'orderId': ?instance.orderId,
+  'token': ?instance.token,
+};

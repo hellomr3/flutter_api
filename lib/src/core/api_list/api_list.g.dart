@@ -9,15 +9,9 @@ part of 'api_list.dart';
 _ApiList<T> _$ApiListFromJson<T>(
   Map<String, dynamic> json,
   T Function(Object? json) fromJsonT,
-) =>
-    _ApiList<T>(
-      list: (json['list'] as List<dynamic>).map(fromJsonT).toList(),
-    );
+) => _ApiList<T>(list: (json['list'] as List<dynamic>).map(fromJsonT).toList());
 
 Map<String, dynamic> _$ApiListToJson<T>(
   _ApiList<T> instance,
   Object? Function(T value) toJsonT,
-) =>
-    <String, dynamic>{
-      'list': instance.list.map(toJsonT).toList(),
-    };
+) => <String, dynamic>{'list': instance.list.map(toJsonT).toList()};

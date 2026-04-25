@@ -7,15 +7,15 @@ part of 'edit_password_query_params.dart';
 // **************************************************************************
 
 _EditPasswordQueryParams _$EditPasswordQueryParamsFromJson(
-        Map<String, dynamic> json) =>
-    _EditPasswordQueryParams(
-      oldPassword: json['oldPassword'] as String,
-      newPassword: json['newPassword'] as String,
-    );
+  Map<String, dynamic> json,
+) => _EditPasswordQueryParams(
+  oldPassword: json['oldPassword'] as String,
+  newPassword: json['newPassword'] as String,
+);
 
 Map<String, dynamic> _$EditPasswordQueryParamsToJson(
-        _EditPasswordQueryParams instance) =>
-    <String, dynamic>{
-      'oldPassword': instance.oldPassword,
-      'newPassword': instance.newPassword,
-    };
+  _EditPasswordQueryParams instance,
+) => <String, dynamic>{
+  'oldPassword': instance.oldPassword,
+  'newPassword': instance.newPassword,
+};

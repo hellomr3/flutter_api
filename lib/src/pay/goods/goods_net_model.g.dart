@@ -28,34 +28,34 @@ _GoodsNetModel _$GoodsNetModelFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$GoodsNetModelToJson(_GoodsNetModel instance) =>
     <String, dynamic>{
-      'id': instance.id,
-      'goodsId': instance.goodsId,
-      'appId': instance.appId,
-      'platform': instance.platform,
-      'channel': instance.channel,
-      'goodsName': instance.goodsName,
-      'goodsDesc': instance.goodsDesc,
-      'recommend': instance.recommend,
-      'tag': instance.tag,
+      'id': ?instance.id,
+      'goodsId': ?instance.goodsId,
+      'appId': ?instance.appId,
+      'platform': ?instance.platform,
+      'channel': ?instance.channel,
+      'goodsName': ?instance.goodsName,
+      'goodsDesc': ?instance.goodsDesc,
+      'recommend': ?instance.recommend,
+      'tag': ?instance.tag,
       'price': instance.price,
       'originalPrice': instance.originalPrice,
-      'currency': instance.currency,
-      'currencySymbol': instance.currencySymbol,
-      'status': instance.status,
-      'goodsDays': instance.goodsDays,
-      'purchaseLimit': instance.purchaseLimit,
+      'currency': ?instance.currency,
+      'currencySymbol': ?instance.currencySymbol,
+      'status': ?instance.status,
+      'goodsDays': ?instance.goodsDays,
+      'purchaseLimit': ?instance.purchaseLimit,
     };
 
 _GoodsListNetModel _$GoodsListNetModelFromJson(Map<String, dynamic> json) =>
     _GoodsListNetModel(
       list: (json['list'] as List<dynamic>?)
-          ?.map((e) => e == null
-              ? null
-              : GoodsNetModel.fromJson(e as Map<String, dynamic>))
+          ?.map(
+            (e) => e == null
+                ? null
+                : GoodsNetModel.fromJson(e as Map<String, dynamic>),
+          )
           .toList(),
     );
 
 Map<String, dynamic> _$GoodsListNetModelToJson(_GoodsListNetModel instance) =>
-    <String, dynamic>{
-      'list': instance.list,
-    };
+    <String, dynamic>{'list': ?instance.list?.map((e) => e?.toJson()).toList()};

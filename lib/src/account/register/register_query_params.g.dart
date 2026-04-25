@@ -15,10 +15,10 @@ _RegisterQueryParams _$RegisterQueryParamsFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$RegisterQueryParamsToJson(
-        _RegisterQueryParams instance) =>
-    <String, dynamic>{
-      'password': instance.password,
-      'rePassword': instance.rePassword,
-      'username': instance.username,
-      'inviterCode': instance.inviterCode,
-    };
+  _RegisterQueryParams instance,
+) => <String, dynamic>{
+  'password': instance.password,
+  'rePassword': instance.rePassword,
+  'username': instance.username,
+  'inviterCode': ?instance.inviterCode,
+};

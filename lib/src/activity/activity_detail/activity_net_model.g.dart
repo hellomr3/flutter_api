@@ -26,16 +26,16 @@ _ActivityNetModel _$ActivityNetModelFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$ActivityNetModelToJson(_ActivityNetModel instance) =>
     <String, dynamic>{
-      'id': instance.id,
-      'title': instance.title,
-      'content': instance.content,
-      'createTime': instance.createTime,
-      'award': instance.award,
-      'awardDays': instance.awardDays,
-      'buttonConfig': instance.buttonConfig,
-      'userParticipationLimit': instance.userParticipationLimit,
-      'totalStockLimit': instance.totalStockLimit,
-      'currentStock': instance.currentStock,
-      'canParticipate': instance.canParticipate,
-      'remainingStock': instance.remainingStock,
+      'id': ?instance.id,
+      'title': ?instance.title,
+      'content': ?instance.content,
+      'createTime': ?instance.createTime,
+      'award': ?instance.award,
+      'awardDays': ?instance.awardDays,
+      'buttonConfig': ?instance.buttonConfig?.map((e) => e.toJson()).toList(),
+      'userParticipationLimit': ?instance.userParticipationLimit,
+      'totalStockLimit': ?instance.totalStockLimit,
+      'currentStock': ?instance.currentStock,
+      'canParticipate': ?instance.canParticipate,
+      'remainingStock': ?instance.remainingStock,
     };

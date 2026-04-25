@@ -7,14 +7,10 @@ part of 'login_model.dart';
 // **************************************************************************
 
 _LoginResponse _$LoginResponseFromJson(Map<String, dynamic> json) =>
-    _LoginResponse(
-      token: json['token'] as String?,
-    );
+    _LoginResponse(token: json['token'] as String?);
 
 Map<String, dynamic> _$LoginResponseToJson(_LoginResponse instance) =>
-    <String, dynamic>{
-      'token': instance.token,
-    };
+    <String, dynamic>{'token': ?instance.token};
 
 _WechatLoginResponse _$WechatLoginResponseFromJson(Map<String, dynamic> json) =>
     _WechatLoginResponse(
@@ -23,11 +19,11 @@ _WechatLoginResponse _$WechatLoginResponseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$WechatLoginResponseToJson(
-        _WechatLoginResponse instance) =>
-    <String, dynamic>{
-      'token': instance.token,
-      'wechatId': instance.wechatId,
-    };
+  _WechatLoginResponse instance,
+) => <String, dynamic>{
+  'token': ?instance.token,
+  'wechatId': ?instance.wechatId,
+};
 
 _HwLoginResponse _$HwLoginResponseFromJson(Map<String, dynamic> json) =>
     _HwLoginResponse(
@@ -37,6 +33,6 @@ _HwLoginResponse _$HwLoginResponseFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$HwLoginResponseToJson(_HwLoginResponse instance) =>
     <String, dynamic>{
-      'token': instance.token,
-      'providerId': instance.providerId,
+      'token': ?instance.token,
+      'providerId': ?instance.providerId,
     };

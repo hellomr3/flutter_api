@@ -15,7 +15,7 @@ _CreateOrderResp _$CreateOrderRespFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$CreateOrderRespToJson(_CreateOrderResp instance) =>
     <String, dynamic>{
-      'orderStr': instance.orderStr,
-      'orderId': instance.orderId,
-      'token': instance.token,
+      'orderStr': ?instance.orderStr,
+      'orderId': ?instance.orderId,
+      'token': ?instance.token,
     };

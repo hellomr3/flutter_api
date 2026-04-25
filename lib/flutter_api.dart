@@ -13,6 +13,7 @@ export 'src/account/login/login_query_params.dart';
 export 'src/account/register/register_query_params.dart';
 export 'src/account/send_email_code/send_email_code_query_params.dart';
 export 'src/account/user/user_model.dart';
+export 'src/account/wechat/wechat_operate_params.dart';
 // Activity
 export 'src/activity/activity_api.dart';
 export 'src/activity/activity_detail/activity_net_model.dart';
