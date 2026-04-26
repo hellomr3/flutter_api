@@ -95,7 +95,7 @@ class _AppApi implements AppApi {
       Options(method: 'GET', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            '/user/v1/checkVersion',
+            '/version/v2/checkVersion',
             queryParameters: queryParameters,
             data: _data,
           )

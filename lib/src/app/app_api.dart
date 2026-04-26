@@ -19,6 +19,6 @@ abstract class AppApi {
   );
 
   /// 检查应用更新
-  @GET("//version/v2/checkVersion")
+  @GET("/version/v2/checkVersion")
   Future<ApiResponse<CheckVersionNetModel>> checkVersion();
 }
