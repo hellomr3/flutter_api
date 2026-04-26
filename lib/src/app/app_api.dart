@@ -15,9 +15,10 @@ abstract class AppApi {
   /// 参与活动
   @POST('/activity/v1/participate')
   Future<ApiResponse<ParticipateActivityNetModel>> participateActivity(
-      @Body() ParticipateActivityQueryModel request);
+    @Body() ParticipateActivityQueryModel request,
+  );
 
   /// 检查应用更新
-  @GET("/user/v1/checkVersion")
+  @GET("//version/v2/checkVersion")
   Future<ApiResponse<CheckVersionNetModel>> checkVersion();
 }
