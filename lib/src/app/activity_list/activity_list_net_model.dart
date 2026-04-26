@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flutter_api/src/activity/activity_detail/activity_net_model.dart';
+import 'package:flutter_api/src/app/activity_detail/activity_net_model.dart';
 
 part 'activity_list_net_model.freezed.dart';
 part 'activity_list_net_model.g.dart';

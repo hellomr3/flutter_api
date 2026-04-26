@@ -1,4 +1,4 @@
-import 'package:flutter_api/src/activity/button/button_net_model.dart';
+import 'package:flutter_api/src/app/button/button_net_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'activity_net_model.freezed.dart';

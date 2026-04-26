@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'activity_api.dart';
+part of 'app_api.dart';
 
 // dart format off
 
@@ -10,8 +10,8 @@ part of 'activity_api.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations,unused_element_parameter,avoid_unused_constructor_parameters,unreachable_from_main
 
-class _ActivityApi implements ActivityApi {
-  _ActivityApi(this._dio, {this.baseUrl, this.errorLogger});
+class _AppApi implements AppApi {
+  _AppApi(this._dio, {this.baseUrl, this.errorLogger});
 
   final Dio _dio;
 
@@ -77,6 +77,36 @@ class _ActivityApi implements ActivityApi {
         _result.data!,
         (json) =>
             ParticipateActivityNetModel.fromJson(json as Map<String, dynamic>),
+      );
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options, response: _result);
+      rethrow;
+    }
+    return _value;
+  }
+
+  @override
+  Future<ApiResponse<CheckVersionNetModel>> checkVersion() async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<ApiResponse<CheckVersionNetModel>>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/user/v1/checkVersion',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late ApiResponse<CheckVersionNetModel> _value;
+    try {
+      _value = ApiResponse<CheckVersionNetModel>.fromJson(
+        _result.data!,
+        (json) => CheckVersionNetModel.fromJson(json as Map<String, dynamic>),
       );
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options, response: _result);

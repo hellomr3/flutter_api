@@ -1,5 +1,5 @@
-import 'package:flutter_api/src/activity/button/button_action_type.dart';
-import 'package:flutter_api/src/activity/button/button_type.dart';
+import 'package:flutter_api/src/app/button/button_action_type.dart';
+import 'package:flutter_api/src/app/button/button_type.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'button_net_model.freezed.dart';

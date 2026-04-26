@@ -2,11 +2,11 @@ import 'package:dio/dio.dart';
 import 'package:flutter_api/flutter_api.dart';
 import 'package:retrofit/retrofit.dart';
 
-part 'activity_api.g.dart';
+part 'app_api.g.dart';
 
 @RestApi(baseUrl: "")
-abstract class ActivityApi {
-  factory ActivityApi(Dio dio) = _ActivityApi;
+abstract class AppApi {
+  factory AppApi(Dio dio) = _AppApi;
 
   /// 获取活动列表 V2
   @GET('/activity/v2/list')
@@ -16,4 +16,8 @@ abstract class ActivityApi {
   @POST('/activity/v1/participate')
   Future<ApiResponse<ParticipateActivityNetModel>> participateActivity(
       @Body() ParticipateActivityQueryModel request);
+
+  /// 检查应用更新
+  @GET("/user/v1/checkVersion")
+  Future<ApiResponse<CheckVersionNetModel>> checkVersion();
 }
